@@ -1,0 +1,102 @@
+head, body{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
+}
+
+h1{ 
+    font-size: 21rem;
+    text-align: center;
+    font-weight: 600;
+    margin-top: -2rem;
+}
+
+h2{
+    font-size: 1.75rem;
+    margin-top: 5rem;
+}
+
+h3{
+    font-size: 7rem;
+}
+
+h4{
+    font-size: 1.8em;
+}
+
+
+hr{
+    margin-top: 1rem;
+}
+
+.newsticker{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: white;
+    background-color: black;
+    padding: 25PX;
+    margin-top: -13rem;
+}
+.newsflash{
+    margin-left: 2rem;
+    font-weight: 200;
+}
+
+
+.flex-container{
+    align-items: center;
+    display: flex; 
+    flex-direction: row;
+    width: 100%;
+    gap: 25PX;
+}
+
+.label{
+    font-size: 0.7em;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 4px 7px;
+}
+.column {
+    padding-top: 30px;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.dontLorem{
+    font-size: 1.8rem;
+}
+
+.space-to-label
+{
+    width: 35%;
+}
+
+.dimitar-belchev-fRBpWLAcWIY-unsplash-1
+{
+width: 100%;
+height: auto;
+}
+.dimitar-belchev-fRBpWLAcWIY-unsplash-1-outer
+{
+    text-align: center;
+} 
+
+.thumbnail-article-image{
+/* image */
+width: 300px;
+height: 300px;
+object-fit: cover;
+object-position: 75%;
+}
+
+.article{
+    width: 870px;
+}
+
+.article-text{
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 22px;
+    width: 870px;
+}
