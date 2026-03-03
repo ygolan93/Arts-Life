@@ -11,7 +11,7 @@ Built with semantic HTML and modular SCSS, fully responsive.
 ## Stack
 
 - HTML5
-- SCSS
+- CSS
 - Responsive Layout
 - GitHub Pages (deployment)
 
