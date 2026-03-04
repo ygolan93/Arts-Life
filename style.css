@@ -149,6 +149,21 @@ hr {
   padding-top: 100px;
 }
 
+.lead-meta {
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 8px 16px;
+}
+
+.lead-meta > .lead-meta-item {
+  flex: 0 1 auto;
+  white-space: nowrap;
+}
+
+.lead-meta > .column {
+  flex: 0 1 auto;
+}
+
 .lead-article-link:hover,
 .lead-article-link:focus-visible {
   background: #f6f6f6;
@@ -311,9 +326,16 @@ hr {
 .black-button {
   background-color: #000;
   color: #fff;
+  cursor: pointer;
   font-size: 12px;
   height: 50px;
+  transition: 0.2s ease;
   width: 100px;
+}
+
+.black-button:hover,
+.black-button:active {
+  opacity: 0.85;
 }
 
 .all-articles-link {
@@ -1227,6 +1249,16 @@ hr {
   .newsticker {
     font-size: 0.95rem;
     margin-top: -2rem;
+  }
+
+  .lead-meta {
+    flex-wrap: wrap;
+    flex-direction:row;
+    gap: 6px;
+  }
+
+  .lead-meta > .column {
+    white-space: normal;
   }
 
   .section-head {
