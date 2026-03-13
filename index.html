@@ -1,50 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art&Life Magazine</title>
-     <link rel="stylesheet" href="style.css">
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Art&Life Magazine</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
     <header>
         <h2>FYRRE MAGAZINE</h2>
         <hr/>
     </header>
-    <body>
     <main>
-        <section class="art&life">
+        <section class="hero">
                     <h1>ART & LIFE</h1>
                     <div class="newsticker">
-                        <nobr> NEWS TICKER+++<span class="newsflash" id="newsmessage"></span> </span></script></nobr> </div>
-                     <script> 
-                        const originMessage =
-                            "Lorem ipsum dolor sit amet consectetur adipisicing elit+++";
-                        const gap = "  ";
-                        var counter = 3;
-                        document.getElementById("newsmessage").textContent = `${originMessage}${gap}`.repeat(counter);
-
-
-                        const originMessage2 = "NEWSLETTER+++";
-                        const gap2 = "     ";
-
-                        function generateTicker() {
-                        const textElement = document.getElementById("footer-message");
-                        if (!textElement) return;
-
-                        const screenWidth = window.innerWidth;
-                        const approxCharWidth = 12;
-                        const messageWidth = (originMessage2.length + gap2.length) * approxCharWidth;
-
-                        const repeatCount = Math.ceil(screenWidth / messageWidth) + 4;
-                        textElement.textContent = (originMessage2 + gap2).repeat(repeatCount);
-                        }
-
-                        generateTicker();
-                        window.addEventListener("DOMContentLoaded", generateTicker);
-                        window.addEventListener("resize", generateTicker);
-                     </script>
+                    NEWS TICKER+++
+                    <span class="newsflash" id="newsmessage"></span>
+                    </div>
         </section>
 
-        <section class="leadArticle">
+        <section class="lead-article">
             <a class="lead-article-link" href="#">
                 <div class="flex-container">
                     <div class="flex-item flex-container">
@@ -52,38 +28,38 @@
                             <h3>DON'T CLOSE YOUR EYES</h3>
                         </div>
                         <div class="column">
-                            <div class="flex-item"><span class="flex-item dont Lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam architecto maxime tenetur cum, aut harum atque. Hic nostrum cumque, vero, recusandae placeat quas voluptatem quibusdam corrupti, cupiditate possimus dolorem?</span></div> 
+                            <div class="flex-item"><span class="flex-item dont Lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam architecto maxime tenetur cum, aut harum atque. Hic nostrum cumque, vero, recusandae placeat quas voluptatem quibusdam corrupti, cupiditate possimus dolorem?</span></div>
                             <div class="flex-container flex-item lead-meta">
-                                <div class="column"><nobr><b>Text </b> Jacob Gronberg</nobr></div>
-                                <div class="column"><nobr><b>Date </b> 16. March 2022</nobr></div>
-                                <div class="column article-time"><nobr><b>Duration </b>1 Min</nobr></div>
+                                <div class="column"><strong>Text </strong> Jacob Gronberg</div>
+                                <div class="column"><strong>Date </strong> 16. March 2022</div>
+                                <div class="column article-time"><strong>Duration </strong>1 Min</div>
                                 <div class="space-to-label"></div>
-                                <div class="column"><label class="label">LABEL</label></div>
+                                <div class="column"><span class="label">LABEL</span></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="dimitar-belchev-fRBpWLAcWIY-unsplash-1-outer"> <img src="assets/dimitar-belchev-fRBpWLAcWIY-unsplash 1.png" alt="dimitar-belchev-fRBpWLAcWIY-unsplash" class="dimitar-belchev-fRBpWLAcWIY-unsplash-1"></div>
+                <div class="hero-image-wrap"> <img src="assets/dimitar-belchev-fRBpWLAcWIY-unsplash 1.png" alt="Black-and-white mural of stylized faces painted on a brick wall" class="hero-image"></div>
             </a>
         </section>
-        <section class="articles&sidebar" id="all-articles">
+        <section class="articles-sidebar" id="all-articles">
             <div class="flex-container">
                 <div class="flex-item flex-container">
                         <div class="column left-column">
                                 <article class="article">
                                     <a class="article-link flex-container" href="#">
                                         <div class="column">
-                                            <img class="thumbnail-article-image" src="assets/diogo-nunes-Wa9ilX9XYOI-unplash.jpg" alt="diogo-nunes-Wa9ilX9XYOI-unplash">
+                                            <img class="thumbnail-article-image" src="assets/diogo-nunes-Wa9ilX9XYOI-unplash.jpg" alt="Black-and-white illustration of a woman with flowing hair against a swirling background">
                                         </div>
                                         <div class="article-text">
                                             <h4>Hope dies last</h4>
                                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aperiam expedita odio atque nisi laborum sit eligendi necessitatibus consequatur explicabo laudantium unde. Esse architecto, ducimus quisquam perspiciatis ex nobis. </p>
                                             <div class="flex-container">
-                                                <div class="column"><nobr><b>Text </b> Jacob Gronberg</nobr></div>
-                                                <div class="column"><nobr><b>Date </b> 16. March 2022 </nobr></div>
-                                                <div class="column article-time"><nobr><b>Duration </b>1 Min </nobr></div>
+                                                <div class="column"><strong>Text </strong> Jacob Gronberg</div>
+                                                <div class="column"><strong>Date </strong> 16. March 2022 </div>
+                                                <div class="column article-time"><strong>Duration </strong>1 Min </div>
                                                 <div class="space-to-label"></div>
-                                                <div class="column"><label class="label">ART</label></div>
+                                                <div class="column"><span class="label">ART</span></div>
                                             </div>
                                         </div>
                                     </a>
@@ -92,17 +68,17 @@
                                 <article class="article">
                                     <a class="article-link flex-container" href="#">
                                         <div class="column">
-                                            <img class="thumbnail-article-image" src="assets/fabian-bachli-A2Zf3fGbdFQ-unsplash.png" alt="fabian-bachli-A2Zf3fGbdFQ-unsplash">
+                                            <img class="thumbnail-article-image" src="assets/fabian-bachli-A2Zf3fGbdFQ-unsplash.png" alt="Close-up of abstract stone sculptures with large circular eyes">
                                         </div>
                                         <div class="article-text">
                                             <h4>The best art museums</h4>
                                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aperiam expedita odio atque nisi laborum sit eligendi necessitatibus consequatur explicabo laudantium unde. Esse architecto, ducimus quisquam perspiciatis ex nobis. </p>
                                             <div class="flex-container">
-                                                <div class="column"><nobr><b>Text </b> Jacob Gronberg</nobr></div>
-                                                <div class="column"><nobr><b>Date </b> 16. March 2022 </nobr></div>
-                                                <div class="column article-time"><nobr><b>Duration </b>1 Min </nobr></div>
+                                                <div class="column"><strong>Text </strong> Jacob Gronberg</div>
+                                                <div class="column"><strong>Date </strong> 16. March 2022 </div>
+                                                <div class="column article-time"><strong>Duration </strong>1 Min </div>
                                                 <div class="space-to-label"></div>
-                                                <div class="column"><label class="label">ART</label></div>
+                                                <div class="column"><span class="label">ART</span></div>
                                             </div>
                                         </div>
                                     </a>
@@ -111,17 +87,17 @@
                                 <article class="article">
                                     <a class="article-link flex-container" href="#">
                                         <div class="column">
-                                            <img class="thumbnail-article-image" src="assets/birmingham-museums-trust-TWavMkqC_cc-unsplash.png" alt="birmingham-museums-trust-TWavMkqC_cc-unsplash">
+                                            <img class="thumbnail-article-image" src="assets/birmingham-museums-trust-TWavMkqC_cc-unsplash.png" alt="Vintage illustration of a woman seated at a desk with her head resting on one hand">
                                         </div>
                                         <div class="article-text">
                                             <h4>The devil is in the details</h4>
                                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aperiam expedita odio atque nisi laborum sit eligendi necessitatibus consequatur explicabo laudantium unde. Esse architecto, ducimus quisquam perspiciatis ex nobis. </p>
                                             <div class="flex-container">
-                                                <div class="column"><nobr><b>Text </b> Jacob Gronberg</nobr></div>
-                                                <div class="column"><nobr><b>Date </b> 16. March 2022 </nobr></div>
-                                                <div class="column article-time"><nobr><b>Duration </b>1 Min </nobr></div>
+                                                <div class="column"><strong>Text </strong> Jacob Gronberg</div>
+                                                <div class="column"><strong>Date </strong> 16. March 2022 </div>
+                                                <div class="column article-time"><strong>Duration </strong>1 Min </div>
                                                 <div class="space-to-label"></div>
-                                                <div class="column"><label class="label">SCULPTURES</label></div>
+                                                <div class="column"><span class="label">SCULPTURES</span></div>
                                             </div>
                                         </div>
                                     </a>
@@ -130,17 +106,17 @@
                                 <article class="article">
                                     <a class="article-link flex-container" href="#">
                                         <div class="column">
-                                            <img class="thumbnail-article-image" src="assets/amelia-brown-yWNiCZw5yps-usnplash.png" alt="amelia-brown-yWNiCZw5yps-usnplash">
+                                            <img class="thumbnail-article-image" src="assets/amelia-brown-yWNiCZw5yps-usnplash.png" alt="Illustration of a single eye inside a triangle surrounded by flowing faces and hair">
                                         </div>
                                         <div class="article-text">
                                             <h4>An indestructuble hope</h4>
                                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aperiam expedita odio atque nisi laborum sit eligendi necessitatibus consequatur explicabo laudantium unde. Esse architecto, ducimus quisquam perspiciatis ex nobis. </p>
                                             <div class="flex-container">
-                                                <div class="column"><nobr><b>Text </b> Jacob Gronberg</nobr></div>
-                                                <div class="column"><nobr><b>Date </b> 16. March 2022 </nobr></div>
-                                                <div class="column article-time"><nobr><b>Duration </b>1 Min </nobr></div>
+                                                <div class="column"><strong>Text </strong> Jacob Gronberg</div>
+                                                <div class="column"><strong>Date </strong> 16. March 2022 </div>
+                                                <div class="column article-time"><strong>Duration </strong>1 Min </div>
                                                 <div class="space-to-label"></div>
-                                                <div class="column"><label class="label">ART</label></div>
+                                                <div class="column"><span class="label">ART</span></div>
                                             </div>
                                         </div>
                                     </a>
@@ -149,17 +125,17 @@
                                 <article class="article">
                                     <a class="article-link flex-container" href="#">
                                         <div class="column">
-                                            <img class="thumbnail-article-image" src="assets/simon-sun-PLai_SojR78-unsplash.png" alt="simon-sun-PLai_SojR78-unsplash">
+                                            <img class="thumbnail-article-image" src="assets/simon-sun-PLai_SojR78-unsplash.png" alt="Black-and-white mural portrait of a hooded woman framed by bold geometric shapes">
                                         </div>
                                         <div class="article-text">
                                             <h4>Street art festivals</h4>
                                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aperiam expedita odio atque nisi laborum sit eligendi necessitatibus consequatur explicabo laudantium unde. Esse architecto, ducimus quisquam perspiciatis ex nobis. </p>
                                             <div class="flex-container">
-                                                <div class="column"><nobr><b>Text </b> Jacob Gronberg</nobr></div>
-                                                <div class="column"><nobr><b>Date </b> 16. March 2022 </nobr></div>
-                                                <div class="column article-time"><nobr><b>Duration </b>1 Min </nobr></div>
+                                                <div class="column"><strong>Text </strong> Jacob Gronberg</div>
+                                                <div class="column"><strong>Date </strong> 16. March 2022 </div>
+                                                <div class="column article-time"><strong>Duration </strong>1 Min </div>
                                                 <div class="space-to-label"></div>
-                                                <div class="column"><label class="label">STREET ART</label></div>
+                                                <div class="column"><span class="label">STREET ART</span></div>
                                             </div>
                                         </div>
                                     </a>
@@ -168,17 +144,17 @@
                                 <article class="article">
                                     <a class="article-link flex-container" href="#">
                                         <div class="column">
-                                            <img class="thumbnail-article-image" src="assets/serhii-tyaglovsky-lCdhTOCNrt4-unsplash.png" alt="serhii-tyaglovsky-lCdhTOCNrt4-unsplash">
+                                            <img class="thumbnail-article-image" src="assets/serhii-tyaglovsky-lCdhTOCNrt4-unsplash.png" alt="Stone sculpture figure emerging from a rough brick wall">
                                         </div>
                                         <div class="article-text">
                                             <h4>Through the eyes of street artists</h4>
                                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aperiam expedita odio atque nisi laborum sit eligendi necessitatibus consequatur explicabo laudantium unde. Esse architecto, ducimus quisquam perspiciatis ex nobis. </p>
                                             <div class="flex-container">
-                                                <div class="column"><nobr><b>Text </b> Jacob Gronberg</nobr></div>
-                                                <div class="column"><nobr><b>Date </b> 16. March 2022 </nobr></div>
-                                                <div class="column article-time"><nobr><b>Duration </b>1 Min </nobr></div>
+                                                <div class="column"><strong>Text </strong> Jacob Gronberg</div>
+                                                <div class="column"><strong>Date </strong> 16. March 2022 </div>
+                                                <div class="column article-time"><strong>Duration </strong>1 Min </div>
                                                 <div class="space-to-label"></div>
-                                                <div class="column"><label class="label">STREET ART</label></div>
+                                                <div class="column"><span class="label">STREET ART</span></div>
                                             </div>
                                         </div>
                                     </a>
@@ -189,11 +165,9 @@
                         <h5>PRINTMAGAZINE</h5>
                         <h6>03/2022</h6>
                         <div class="flex-item">
-                            <img src="assets/magazin-cover.png" class="magazin-cover-img" alt="magazin-cover">
+                            <img src="assets/magazin-cover.png" class="magazin-cover-img" alt="FYRRE magazine cover featuring a geometric sculpture portrait and the March 2022 issue date">
                         </div>
-                        <BR/>
-                        <button class="black-button">BUTTON</button>
-                        <br/>
+                        <button class="black-button sidebar-cta">BUTTON</button>
                         <div class="popular" aria-labelledby="popular-title">
                         <div class="popular__header">
                             <h5 id="popular-title" class="popular__kicker">MOST POPULAR</h5>
@@ -205,7 +179,7 @@
                                 <div class="popular__num" aria-hidden="true">01</div>
                                 <div class="popular__body">
                                     <h4 class="popular__title">Street art festival</h4>
-                                    <div class="popular__meta"><b>Text</b>&nbsp;Cristofer Vaccaro</div>
+                                    <div class="popular__meta"><strong>Text</strong> Cristofer Vaccaro</div>
                                 </div>
                             </a>
                             </article>
@@ -215,7 +189,7 @@
                                 <div class="popular__num" aria-hidden="true">02</div>
                                 <div class="popular__body">
                                     <h4 class="popular__title">Hope dies last</h4>
-                                    <div class="popular__meta"><b>Text</b>&nbsp;Anne Henry</div>
+                                    <div class="popular__meta"><strong>Text</strong> Anne Henry</div>
                                 </div>
                             </a>
                             </article>
@@ -225,7 +199,7 @@
                                 <div class="popular__num" aria-hidden="true">03</div>
                                 <div class="popular__body">
                                     <h4 class="popular__title">Artists who want to rise above</h4>
-                                    <div class="popular__meta"><b>Text</b>&nbsp;Anna Nielsen</div>
+                                    <div class="popular__meta"><strong>Text</strong> Anna Nielsen</div>
                                 </div>
                             </a>
                             </article>
@@ -235,7 +209,7 @@
                         <div class="newsletter__inner">
                             <h5 class="newsletter__kicker">NEWSLETTER</h5>
                             <h3 class="newsletter__title">
-                            Design News to<br>your inbox
+                            <span>Design News to</span><span class="title-line">your inbox</span>
                             </h3>
 
                             <form class="newsletter__form">
@@ -267,10 +241,10 @@
             <article class="podcast-card">
             <a class="podcast-link" href="#" aria-label="Open episode 5: The Problem of today’s cultural development">
                 <div class="cover">
-                <img src="assets/podcast-cover-1.png" alt="FYRRE Podcast cover, episode 05" loading="lazy" />
+                <img src="assets/podcast-cover-1.png" alt="" loading="lazy" />
                 </div>
 
-                <h3 class="podcast-title">The Problem of today’s<br />cultural development</h3>
+                <h3 class="podcast-title"><span>The Problem of today’s</span><span class="title-line">cultural development</span></h3>
 
                 <dl class="podcast-meta">
                 <div class="meta-item">
@@ -289,10 +263,10 @@
             <article class="podcast-card">
             <a class="podcast-link" href="#" aria-label="Open episode 4: The hidden messages of Jack Nielson">
                 <div class="cover">
-                <img src="assets/podcast-cover-2.png" alt="FYRRE Podcast cover, episode 04" loading="lazy" />
+                <img src="assets/podcast-cover-2.png" alt="" loading="lazy" />
                 </div>
 
-                <h3 class="podcast-title">The hidden messages of<br />Jack Nielson</h3>
+                <h3 class="podcast-title"><span>The hidden messages of</span><span class="title-line">Jack Nielson</span></h3>
 
                 <dl class="podcast-meta">
                 <div class="meta-item">
@@ -311,10 +285,10 @@
             <article class="podcast-card">
             <a class="podcast-link" href="#" aria-label="Open episode 3: Behind the scenes of the street art culture">
                 <div class="cover">
-                <img src="assets/podcast-cover-3.png" alt="FYRRE Podcast cover, episode 03" loading="lazy" />
+                <img src="assets/podcast-cover-3.png" alt="" loading="lazy" />
                 </div>
 
-                <h3 class="podcast-title">Behind the scenes of the<br />street art culture</h3>
+                <h3 class="podcast-title"><span>Behind the scenes of the</span><span class="title-line">street art culture</span></h3>
 
                 <dl class="podcast-meta">
                 <div class="meta-item">
@@ -343,7 +317,7 @@
             <!-- Row 1 -->
             <article class="author-row">
                 <div class="author-cell author-left">
-                <img class="author-avatar" src="assets/Jacob Gronberg.png" alt="Jacob Gronberg" loading="lazy" />
+                <img class="author-avatar" src="assets/Jacob Gronberg.png" alt="" loading="lazy" />
                 <div class="author-info">
                     <h3 class="author-name">Jakob Grønberg</h3>
                     <p class="author-meta">
@@ -354,7 +328,7 @@
                 </div>
 
                 <div class="author-cell author-right">
-                <img class="author-avatar" src="assets/Anna Nielsen.png" alt="Anna Nielsen" loading="lazy" />
+                <img class="author-avatar" src="assets/Anna Nielsen.png" alt="" loading="lazy" />
                 <div class="author-info">
                     <h3 class="author-name">Anna Nielsen</h3>
                     <p class="author-meta">
@@ -368,7 +342,7 @@
             <!-- Row 2 -->
             <article class="author-row">
                 <div class="author-cell author-left">
-                <img class="author-avatar" src="assets/Anne Henry.png" alt="Anne Henry" loading="lazy" />
+                <img class="author-avatar" src="assets/Anne Henry.png" alt="" loading="lazy" />
                 <div class="author-info">
                     <h3 class="author-name">Anne Henry</h3>
                     <p class="author-meta">
@@ -379,7 +353,7 @@
                 </div>
 
                 <div class="author-cell author-right">
-                <img class="author-avatar" src="assets/Louise Jensen.png" alt="Louise Jensen" loading="lazy" />
+                <img class="author-avatar" src="assets/Louise Jensen.png" alt="" loading="lazy" />
                 <div class="author-info">
                     <h3 class="author-name">Louise Jensen</h3>
                     <p class="author-meta">
@@ -393,7 +367,7 @@
             <!-- Row 3 -->
             <article class="author-row">
                 <div class="author-cell author-left">
-                <img class="author-avatar" src="assets/Jane Cooper.png" alt="Jane Cooper" loading="lazy" />
+                <img class="author-avatar" src="assets/Jane Cooper.png" alt="" loading="lazy" />
                 <div class="author-info">
                     <h3 class="author-name">Jane Cooper</h3>
                     <p class="author-meta">
@@ -404,7 +378,7 @@
                 </div>
 
                 <div class="author-cell author-right">
-                <img class="author-avatar" src="assets/Cristofer Vaccaro.png" alt="Cristofer Vaccaro" loading="lazy" />
+                <img class="author-avatar" src="assets/Cristofer Vaccaro.png" alt="" loading="lazy" />
                 <div class="author-info">
                     <h3 class="author-name">Cristofer Vaccaro</h3>
                     <p class="author-meta">
@@ -431,7 +405,7 @@
             <div class="footer-top">
 
             <div class="footer-heading">
-               <h2> <nobr> DESIGN NEWS TO</nobr> <br />YOUR INBOX</h2>
+               <h2><span>DESIGN NEWS TO</span><span class="title-line">YOUR INBOX</span></h2>
             </div>
 
             <form class="footer-form" action="#" method="post">
@@ -500,8 +474,8 @@
             </div>
         </div>
         </footer>
-
     </main>
+    <script src="ticker.js"></script>
     </body>
 
 </html>

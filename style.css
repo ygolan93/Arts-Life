@@ -14,6 +14,11 @@ body {
   padding: 0;
 }
 
+.site-shell {
+  width: min(1680px, calc(100% - 140px));
+  margin: 0 auto;
+}
+
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
@@ -114,12 +119,12 @@ hr {
   margin-left: 2rem;
 }
 
-.dimitar-belchev-fRBpWLAcWIY-unsplash-1 {
+.hero-image {
   height: auto;
   width: 100%;
 }
 
-.dimitar-belchev-fRBpWLAcWIY-unsplash-1-outer {
+.hero-image-wrap {
   text-align: center;
   padding-bottom: 3em;
 }
@@ -315,6 +320,10 @@ hr {
   padding: 0;
 }
 
+.sidebar-cta {
+  margin-top: 1.5rem;
+}
+
 .magazin-cover-img {
   display: block;
   height: 500px;
@@ -383,6 +392,7 @@ hr {
 .popular {
   align-self: stretch;
   background: #fff;
+  margin-top: 1.5rem;
   width: 100%;
 }
 
@@ -482,6 +492,10 @@ hr {
   font-weight: 800;
   line-height: 1.1;
   margin: 0 0 40px;
+}
+
+.title-line {
+  display: block;
 }
 
 .newsletter__form {
@@ -1062,7 +1076,7 @@ hr {
     display: none;
   }
 
-  .articles\&sidebar > .flex-container > .flex-item.flex-container {
+  .articles-sidebar > .flex-container > .flex-item.flex-container {
     flex-direction: column;
     gap: 32px;
   }
