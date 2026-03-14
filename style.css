@@ -103,12 +103,21 @@ hr {
 /* =========================
    Hero / Ticker
 ========================= */
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero h1 {
+  margin-bottom: 0;
+}
+
 .newsticker {
   background-color: #000;
   color: #fff;
   font-size: 1.6rem;
   font-weight: 600;
-  margin-top: -13rem;
+  margin-top: 0;
   padding: 25px;
 }
 
@@ -136,24 +145,34 @@ hr {
   transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
 }
 
-.lead-article-link > .flex-container > .flex-item.flex-container {
+.lead-article__layout {
   align-items: stretch;
+  display: flex;
+  gap: 25px;
+  width: 100%;
 }
 
-.lead-article-link > .flex-container > .flex-item.flex-container > .column:last-child {
+.lead-article__heading,
+.lead-article__body {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.lead-article__body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding-bottom: 20px;
 }
 
-.lead-article-link > .flex-container > .flex-item.flex-container > .column:last-child > .flex-item {
+.lead-article__summary {
   padding-bottom: 30px;
   padding-top: 100px;
 }
 
 .lead-meta {
   align-items: flex-start;
+  display: flex;
   flex-wrap: nowrap;
   gap: 8px 16px;
 }
@@ -210,13 +229,11 @@ hr {
   transform: translateY(-1px);
 }
 
-.article > .flex-container,
 .article > .article-link {
   align-items: flex-start;
   flex-wrap: nowrap;
 }
 
-.article > .flex-container > .column,
 .article > .article-link > .column {
   flex: 0 0 300px;
 }
@@ -240,9 +257,29 @@ hr {
   margin-top: 0;
 }
 
-.article-text>.flex-container{
+.articles-sidebar__layout {
+  align-items: flex-start;
+  display: flex;
+  gap: 25px;
+  width: 100%;
+}
+
+.articles-sidebar__main {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.articles-sidebar__aside {
+  flex: 0 0 auto;
+}
+
+.article-meta {
+  align-items: center;
+  display: flex;
   font-size: 15px;
+  gap: 25px;
   margin-top: 3em;
+  width: 100%;
 }
 
 .article-time {
@@ -573,7 +610,7 @@ hr {
   margin: 0;
 }
 
-.podcast .flex-container {
+.podcast-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
@@ -814,11 +851,19 @@ hr {
 }
 
 .footer-links {
+  align-items: flex-start;
   display: flex;
   gap: 60px;
   justify-content: space-between;
   margin-bottom: 80px;
   padding-top: 0;
+}
+
+.footer-links-grid {
+  display: grid;
+  flex: 1 1 auto;
+  gap: 60px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .footer-brand h3 {
@@ -832,17 +877,12 @@ hr {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding-top: 50px;
-  position: relative;
+  padding-top: 0;
 }
 
-.footer-col::before {
+.footer-nav {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  content: "";
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 350%;
+  padding-top: 50px;
 }
 
 .footer-col a {
@@ -1043,7 +1083,7 @@ hr {
 
   .newsticker {
     font-size: 1.05rem;
-    margin-top: -4rem;
+    margin-top: 0;
     overflow: hidden;
     padding: 14px 16px;
   }
@@ -1053,16 +1093,16 @@ hr {
     word-break: break-word;
   }
 
-  .lead-article-link > .flex-container > .flex-item.flex-container {
+  .lead-article__layout {
     flex-direction: column;
     gap: 18px;
   }
 
-  .lead-article-link > .flex-container > .flex-item.flex-container > .column:last-child {
+  .lead-article__body {
     padding-bottom: 0;
   }
 
-  .lead-article-link > .flex-container > .flex-item.flex-container > .column:last-child > .flex-item {
+  .lead-article__summary {
     padding-bottom: 12px;
     padding-top: 12px;
   }
@@ -1071,7 +1111,7 @@ hr {
     display: none;
   }
 
-  .articles-sidebar > .flex-container > .flex-item.flex-container {
+  .articles-sidebar__layout {
     flex-direction: column;
     gap: 32px;
   }
@@ -1099,7 +1139,7 @@ hr {
     font-size: 1rem;
   }
 
-  .article-text > .flex-container {
+  .article-text > .article-meta {
     flex-wrap: wrap;
     gap: 10px 16px;
     margin-top: 1.2rem;
@@ -1140,7 +1180,7 @@ hr {
     padding: 56px 0;
   }
 
-  .podcast .flex-container {
+  .podcast-grid {
     gap: 20px;
   }
 
@@ -1208,12 +1248,12 @@ hr {
     margin-bottom: 44px;
   }
 
-  .footer-col {
-    padding-top: 24px;
+  .footer-links-grid {
+    gap: 24px;
   }
 
-  .footer-col::before {
-    width: 100%;
+  .footer-nav {
+    padding-top: 24px;
   }
 
   .footer-bottom {
@@ -1251,7 +1291,7 @@ hr {
 
   .newsticker {
     font-size: 0.95rem;
-    margin-top: -2rem;
+    margin-top: 0;
   }
 
   .lead-meta {
@@ -1288,6 +1328,11 @@ hr {
 
   .footer-links {
     flex-direction: column;
+  }
+
+  .footer-links-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
   }
 
   .footer-socials .social {
