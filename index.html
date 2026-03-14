@@ -1,482 +1,590 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Art&Life Magazine</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="site-shell">
-            <header>
-                <h2>FYRRE MAGAZINE</h2>
-                <hr/>
-            </header>
-            <main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art&Life Magazine</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header>
+        <h2>FYRRE MAGAZINE</h2>
+        <hr />
+      </header>
+
+      <main>
         <section class="hero">
-            <div class="hero__inner">
-                <h1>ART & LIFE</h1>
-                <div class="newsticker">
-                NEWS TICKER+++
-                <span class="newsflash" id="newsmessage"></span>
-                </div>
+          <div class="hero__inner">
+            <h1>ART &amp; LIFE</h1>
+            <div class="newsticker">
+              NEWS TICKER+++
+              <span class="newsflash" id="newsmessage"></span>
             </div>
+          </div>
         </section>
 
         <section class="lead-article">
-            <a class="lead-article-link" href="#">
-                <div class="lead-article__layout">
-                    <div class="lead-article__heading left-column">
-                        <h3>DON'T CLOSE YOUR EYES</h3>
-                    </div>
-                    <div class="lead-article__body">
-                        <div class="lead-article__summary"><span class="dontLorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam architecto maxime tenetur cum, aut harum atque. Hic nostrum cumque, vero, recusandae placeat quas voluptatem quibusdam corrupti, cupiditate possimus dolorem?</span></div>
-                        <div class="lead-meta">
-                                <div class="column"><strong>Text </strong> Jacob Gronberg</div>
-                                <div class="column"><strong>Date </strong> 16. March 2022</div>
-                                <div class="column article-time"><strong>Duration </strong>1 Min</div>
-                                <div class="space-to-label"></div>
-                                <div class="column"><span class="label">LABEL</span></div>
-                        </div>
-                    </div>
+          <a class="lead-article-link" href="#">
+            <div class="lead-article__layout">
+              <div class="lead-article__heading">
+                <h3>DON'T CLOSE YOUR EYES</h3>
+              </div>
+
+              <div class="lead-article__body">
+                <div class="lead-article__summary">
+                  <span class="lead-summary-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam architecto maxime tenetur
+                    cum, aut harum atque. Hic nostrum cumque, vero, recusandae placeat quas voluptatem quibusdam
+                    corrupti, cupiditate possimus dolorem?
+                  </span>
                 </div>
-                <div class="hero-image-wrap"> <img src="assets/dimitar-belchev-fRBpWLAcWIY-unsplash 1.png" alt="Black-and-white mural of stylized faces painted on a brick wall" class="hero-image"></div>
-            </a>
-        </section>
-        <section class="articles-sidebar" id="all-articles">
-            <div class="articles-sidebar__layout">
-                <div class="articles-sidebar__main left-column">
-                                <article class="article">
-                                    <a class="article-link" href="#">
-                                        <div class="column">
-                                            <img class="thumbnail-article-image" src="assets/diogo-nunes-Wa9ilX9XYOI-unplash.jpg" alt="Black-and-white illustration of a woman with flowing hair against a swirling background">
-                                        </div>
-                                        <div class="article-text">
-                                            <h4>Hope dies last</h4>
-                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aperiam expedita odio atque nisi laborum sit eligendi necessitatibus consequatur explicabo laudantium unde. Esse architecto, ducimus quisquam perspiciatis ex nobis. </p>
-                                            <div class="article-meta">
-                                                <div class="column"><strong>Text </strong> Jacob Gronberg</div>
-                                                <div class="column"><strong>Date </strong> 16. March 2022 </div>
-                                                <div class="column article-time"><strong>Duration </strong>1 Min </div>
-                                                <div class="space-to-label"></div>
-                                                <div class="column"><span class="label">ART</span></div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <hr/>
-                                </article>
-                                <article class="article">
-                                    <a class="article-link" href="#">
-                                        <div class="column">
-                                            <img class="thumbnail-article-image" src="assets/fabian-bachli-A2Zf3fGbdFQ-unsplash.png" alt="Close-up of abstract stone sculptures with large circular eyes">
-                                        </div>
-                                        <div class="article-text">
-                                            <h4>The best art museums</h4>
-                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aperiam expedita odio atque nisi laborum sit eligendi necessitatibus consequatur explicabo laudantium unde. Esse architecto, ducimus quisquam perspiciatis ex nobis. </p>
-                                            <div class="article-meta">
-                                                <div class="column"><strong>Text </strong> Jacob Gronberg</div>
-                                                <div class="column"><strong>Date </strong> 16. March 2022 </div>
-                                                <div class="column article-time"><strong>Duration </strong>1 Min </div>
-                                                <div class="space-to-label"></div>
-                                                <div class="column"><span class="label">ART</span></div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <hr/>
-                                </article>
-                                <article class="article">
-                                    <a class="article-link" href="#">
-                                        <div class="column">
-                                            <img class="thumbnail-article-image" src="assets/birmingham-museums-trust-TWavMkqC_cc-unsplash.png" alt="Vintage illustration of a woman seated at a desk with her head resting on one hand">
-                                        </div>
-                                        <div class="article-text">
-                                            <h4>The devil is in the details</h4>
-                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aperiam expedita odio atque nisi laborum sit eligendi necessitatibus consequatur explicabo laudantium unde. Esse architecto, ducimus quisquam perspiciatis ex nobis. </p>
-                                            <div class="article-meta">
-                                                <div class="column"><strong>Text </strong> Jacob Gronberg</div>
-                                                <div class="column"><strong>Date </strong> 16. March 2022 </div>
-                                                <div class="column article-time"><strong>Duration </strong>1 Min </div>
-                                                <div class="space-to-label"></div>
-                                                <div class="column"><span class="label">SCULPTURES</span></div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <hr/>
-                                </article>
-                                <article class="article">
-                                    <a class="article-link" href="#">
-                                        <div class="column">
-                                            <img class="thumbnail-article-image" src="assets/amelia-brown-yWNiCZw5yps-usnplash.png" alt="Illustration of a single eye inside a triangle surrounded by flowing faces and hair">
-                                        </div>
-                                        <div class="article-text">
-                                            <h4>An indestructuble hope</h4>
-                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aperiam expedita odio atque nisi laborum sit eligendi necessitatibus consequatur explicabo laudantium unde. Esse architecto, ducimus quisquam perspiciatis ex nobis. </p>
-                                            <div class="article-meta">
-                                                <div class="column"><strong>Text </strong> Jacob Gronberg</div>
-                                                <div class="column"><strong>Date </strong> 16. March 2022 </div>
-                                                <div class="column article-time"><strong>Duration </strong>1 Min </div>
-                                                <div class="space-to-label"></div>
-                                                <div class="column"><span class="label">ART</span></div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <hr/>
-                                </article>
-                                <article class="article">
-                                    <a class="article-link" href="#">
-                                        <div class="column">
-                                            <img class="thumbnail-article-image" src="assets/simon-sun-PLai_SojR78-unsplash.png" alt="Black-and-white mural portrait of a hooded woman framed by bold geometric shapes">
-                                        </div>
-                                        <div class="article-text">
-                                            <h4>Street art festivals</h4>
-                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aperiam expedita odio atque nisi laborum sit eligendi necessitatibus consequatur explicabo laudantium unde. Esse architecto, ducimus quisquam perspiciatis ex nobis. </p>
-                                            <div class="article-meta">
-                                                <div class="column"><strong>Text </strong> Jacob Gronberg</div>
-                                                <div class="column"><strong>Date </strong> 16. March 2022 </div>
-                                                <div class="column article-time"><strong>Duration </strong>1 Min </div>
-                                                <div class="space-to-label"></div>
-                                                <div class="column"><span class="label">STREET ART</span></div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <hr/>
-                                </article>
-                                <article class="article">
-                                    <a class="article-link" href="#">
-                                        <div class="column">
-                                            <img class="thumbnail-article-image" src="assets/serhii-tyaglovsky-lCdhTOCNrt4-unsplash.png" alt="Stone sculpture figure emerging from a rough brick wall">
-                                        </div>
-                                        <div class="article-text">
-                                            <h4>Through the eyes of street artists</h4>
-                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aperiam expedita odio atque nisi laborum sit eligendi necessitatibus consequatur explicabo laudantium unde. Esse architecto, ducimus quisquam perspiciatis ex nobis. </p>
-                                            <div class="article-meta">
-                                                <div class="column"><strong>Text </strong> Jacob Gronberg</div>
-                                                <div class="column"><strong>Date </strong> 16. March 2022 </div>
-                                                <div class="column article-time"><strong>Duration </strong>1 Min </div>
-                                                <div class="space-to-label"></div>
-                                                <div class="column"><span class="label">STREET ART</span></div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </article>
-                                <a href="#all-articles" class="all-articles-link">ALL ARTICLES</a>
+
+                <div class="lead-meta">
+                  <div class="column"><strong>Text </strong> Jacob Gronberg</div>
+                  <div class="column"><strong>Date </strong> 16. March 2022</div>
+                  <div class="column article-time"><strong>Duration </strong>1 Min</div>
+                  <div class="space-to-label"></div>
+                  <div class="column"><span class="label">LABEL</span></div>
                 </div>
-                <aside class="articles-sidebar__aside right-column">
-                        <h5>PRINTMAGAZINE</h5>
-                        <h6>03/2022</h6>
-                        <div class="flex-item">
-                            <img src="assets/magazin-cover.png" class="magazin-cover-img" alt="FYRRE magazine cover featuring a geometric sculpture portrait and the March 2022 issue date">
-                        </div>
-                        <button class="black-button sidebar-cta">BUTTON</button>
-                        <div class="popular" aria-labelledby="popular-title">
-                        <div class="popular__header">
-                            <h5 id="popular-title" class="popular__kicker">MOST POPULAR</h5>
-                        </div>
-
-                        <div class="popular__list">
-                            <article class="popular__item">
-                            <a class="popular__link" href="#">
-                                <div class="popular__num" aria-hidden="true">01</div>
-                                <div class="popular__body">
-                                    <h4 class="popular__title">Street art festival</h4>
-                                    <div class="popular__meta"><strong>Text</strong> Cristofer Vaccaro</div>
-                                </div>
-                            </a>
-                            </article>
-
-                            <article class="popular__item">
-                            <a class="popular__link" href="#">
-                                <div class="popular__num" aria-hidden="true">02</div>
-                                <div class="popular__body">
-                                    <h4 class="popular__title">Hope dies last</h4>
-                                    <div class="popular__meta"><strong>Text</strong> Anne Henry</div>
-                                </div>
-                            </a>
-                            </article>
-
-                            <article class="popular__item">
-                            <a class="popular__link" href="#">
-                                <div class="popular__num" aria-hidden="true">03</div>
-                                <div class="popular__body">
-                                    <h4 class="popular__title">Artists who want to rise above</h4>
-                                    <div class="popular__meta"><strong>Text</strong> Anna Nielsen</div>
-                                </div>
-                            </a>
-                            </article>
-                        </div>
-                        </div>
-                        <div class="newsletter">
-                        <div class="newsletter__inner">
-                            <h5 class="newsletter__kicker">NEWSLETTER</h5>
-                            <h3 class="newsletter__title">
-                            <span>Design News to</span><span class="title-line">your inbox</span>
-                            </h3>
-
-                            <form class="newsletter__form">
-                            <input 
-                                type="email" 
-                                class="newsletter__input" 
-                                placeholder="Email"
-                                required
-                            />
-                            <button type="submit" class="newsletter__button">
-                                SIGN UP
-                            </button>
-                            </form>
-                        </div>
-                </aside>
+              </div>
             </div>
+
+            <div class="hero-image-wrap">
+              <img
+                src="assets/dimitar-belchev-fRBpWLAcWIY-unsplash 1.png"
+                alt="Black-and-white mural of stylized faces painted on a brick wall"
+                class="hero-image"
+              />
+            </div>
+          </a>
+        </section>
+
+        <section class="articles-sidebar" id="all-articles">
+          <div class="articles-sidebar__layout">
+            <div class="articles-sidebar__main">
+              <article class="article">
+                <a class="article-link" href="#">
+                  <div class="column">
+                    <img
+                      class="thumbnail-article-image"
+                      src="assets/diogo-nunes-Wa9ilX9XYOI-unplash.jpg"
+                      alt="Black-and-white illustration of a woman with flowing hair against a swirling background"
+                    />
+                  </div>
+
+                  <div class="article-text">
+                    <h4>Hope dies last</h4>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aperiam expedita odio atque
+                      nisi laborum sit eligendi necessitatibus consequatur explicabo laudantium unde. Esse architecto,
+                      ducimus quisquam perspiciatis ex nobis.
+                    </p>
+
+                    <div class="article-meta">
+                      <div class="column"><strong>Text </strong> Jacob Gronberg</div>
+                      <div class="column"><strong>Date </strong> 16. March 2022</div>
+                      <div class="column article-time"><strong>Duration </strong>1 Min</div>
+                      <div class="space-to-label"></div>
+                      <div class="column"><span class="label">ART</span></div>
+                    </div>
+                  </div>
+                </a>
+                <hr />
+              </article>
+
+              <article class="article">
+                <a class="article-link" href="#">
+                  <div class="column">
+                    <img
+                      class="thumbnail-article-image"
+                      src="assets/fabian-bachli-A2Zf3fGbdFQ-unsplash.png"
+                      alt="Close-up of abstract stone sculptures with large circular eyes"
+                    />
+                  </div>
+
+                  <div class="article-text">
+                    <h4>The best art museums</h4>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aperiam expedita odio atque
+                      nisi laborum sit eligendi necessitatibus consequatur explicabo laudantium unde. Esse architecto,
+                      ducimus quisquam perspiciatis ex nobis.
+                    </p>
+
+                    <div class="article-meta">
+                      <div class="column"><strong>Text </strong> Jacob Gronberg</div>
+                      <div class="column"><strong>Date </strong> 16. March 2022</div>
+                      <div class="column article-time"><strong>Duration </strong>1 Min</div>
+                      <div class="space-to-label"></div>
+                      <div class="column"><span class="label">ART</span></div>
+                    </div>
+                  </div>
+                </a>
+                <hr />
+              </article>
+
+              <article class="article">
+                <a class="article-link" href="#">
+                  <div class="column">
+                    <img
+                      class="thumbnail-article-image"
+                      src="assets/birmingham-museums-trust-TWavMkqC_cc-unsplash.png"
+                      alt="Vintage illustration of a woman seated at a desk with her head resting on one hand"
+                    />
+                  </div>
+
+                  <div class="article-text">
+                    <h4>The devil is in the details</h4>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aperiam expedita odio atque
+                      nisi laborum sit eligendi necessitatibus consequatur explicabo laudantium unde. Esse architecto,
+                      ducimus quisquam perspiciatis ex nobis.
+                    </p>
+
+                    <div class="article-meta">
+                      <div class="column"><strong>Text </strong> Jacob Gronberg</div>
+                      <div class="column"><strong>Date </strong> 16. March 2022</div>
+                      <div class="column article-time"><strong>Duration </strong>1 Min</div>
+                      <div class="space-to-label"></div>
+                      <div class="column"><span class="label">SCULPTURES</span></div>
+                    </div>
+                  </div>
+                </a>
+                <hr />
+              </article>
+
+              <article class="article">
+                <a class="article-link" href="#">
+                  <div class="column">
+                    <img
+                      class="thumbnail-article-image"
+                      src="assets/amelia-brown-yWNiCZw5yps-usnplash.png"
+                      alt="Illustration of a single eye inside a triangle surrounded by flowing faces and hair"
+                    />
+                  </div>
+
+                  <div class="article-text">
+                    <h4>An indestructuble hope</h4>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aperiam expedita odio atque
+                      nisi laborum sit eligendi necessitatibus consequatur explicabo laudantium unde. Esse architecto,
+                      ducimus quisquam perspiciatis ex nobis.
+                    </p>
+
+                    <div class="article-meta">
+                      <div class="column"><strong>Text </strong> Jacob Gronberg</div>
+                      <div class="column"><strong>Date </strong> 16. March 2022</div>
+                      <div class="column article-time"><strong>Duration </strong>1 Min</div>
+                      <div class="space-to-label"></div>
+                      <div class="column"><span class="label">ART</span></div>
+                    </div>
+                  </div>
+                </a>
+                <hr />
+              </article>
+
+              <article class="article">
+                <a class="article-link" href="#">
+                  <div class="column">
+                    <img
+                      class="thumbnail-article-image"
+                      src="assets/simon-sun-PLai_SojR78-unsplash.png"
+                      alt="Black-and-white mural portrait of a hooded woman framed by bold geometric shapes"
+                    />
+                  </div>
+
+                  <div class="article-text">
+                    <h4>Street art festivals</h4>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aperiam expedita odio atque
+                      nisi laborum sit eligendi necessitatibus consequatur explicabo laudantium unde. Esse architecto,
+                      ducimus quisquam perspiciatis ex nobis.
+                    </p>
+
+                    <div class="article-meta">
+                      <div class="column"><strong>Text </strong> Jacob Gronberg</div>
+                      <div class="column"><strong>Date </strong> 16. March 2022</div>
+                      <div class="column article-time"><strong>Duration </strong>1 Min</div>
+                      <div class="space-to-label"></div>
+                      <div class="column"><span class="label">STREET ART</span></div>
+                    </div>
+                  </div>
+                </a>
+                <hr />
+              </article>
+
+              <article class="article">
+                <a class="article-link" href="#">
+                  <div class="column">
+                    <img
+                      class="thumbnail-article-image"
+                      src="assets/serhii-tyaglovsky-lCdhTOCNrt4-unsplash.png"
+                      alt="Stone sculpture figure emerging from a rough brick wall"
+                    />
+                  </div>
+
+                  <div class="article-text">
+                    <h4>Through the eyes of street artists</h4>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aperiam expedita odio atque
+                      nisi laborum sit eligendi necessitatibus consequatur explicabo laudantium unde. Esse architecto,
+                      ducimus quisquam perspiciatis ex nobis.
+                    </p>
+
+                    <div class="article-meta">
+                      <div class="column"><strong>Text </strong> Jacob Gronberg</div>
+                      <div class="column"><strong>Date </strong> 16. March 2022</div>
+                      <div class="column article-time"><strong>Duration </strong>1 Min</div>
+                      <div class="space-to-label"></div>
+                      <div class="column"><span class="label">STREET ART</span></div>
+                    </div>
+                  </div>
+                </a>
+              </article>
+
+              <a href="#all-articles" class="all-articles-link">ALL ARTICLES</a>
+            </div>
+
+            <aside class="articles-sidebar__aside right-column">
+              <h5>PRINTMAGAZINE</h5>
+              <h6>03/2022</h6>
+
+              <div class="sidebar-cover">
+                <img
+                  src="assets/magazin-cover.png"
+                  class="magazine-cover-image"
+                  alt="FYRRE magazine cover featuring a geometric sculpture portrait and the March 2022 issue date"
+                />
+              </div>
+
+              <button class="black-button sidebar-cta">BUTTON</button>
+
+              <div class="popular" aria-labelledby="popular-title">
+                <div class="popular__header">
+                  <h5 id="popular-title" class="popular__kicker">MOST POPULAR</h5>
+                </div>
+
+                <div class="popular__list">
+                  <article class="popular__item">
+                    <a class="popular__link" href="#">
+                      <div class="popular__num" aria-hidden="true">01</div>
+                      <div class="popular__body">
+                        <h4 class="popular__title">Street art festival</h4>
+                        <div class="popular__meta"><strong>Text</strong> Cristofer Vaccaro</div>
+                      </div>
+                    </a>
+                  </article>
+
+                  <article class="popular__item">
+                    <a class="popular__link" href="#">
+                      <div class="popular__num" aria-hidden="true">02</div>
+                      <div class="popular__body">
+                        <h4 class="popular__title">Hope dies last</h4>
+                        <div class="popular__meta"><strong>Text</strong> Anne Henry</div>
+                      </div>
+                    </a>
+                  </article>
+
+                  <article class="popular__item">
+                    <a class="popular__link" href="#">
+                      <div class="popular__num" aria-hidden="true">03</div>
+                      <div class="popular__body">
+                        <h4 class="popular__title">Artists who want to rise above</h4>
+                        <div class="popular__meta"><strong>Text</strong> Anna Nielsen</div>
+                      </div>
+                    </a>
+                  </article>
+                </div>
+              </div>
+
+              <div class="newsletter">
+                <h5 class="newsletter__kicker">NEWSLETTER</h5>
+                <h3 class="newsletter__title">
+                  <span>Design News to</span>
+                  <span class="title-line">your inbox</span>
+                </h3>
+
+                <form class="newsletter__form">
+                  <label class="sr-only" for="newsletterEmail">Email</label>
+                  <input
+                    id="newsletterEmail"
+                    type="email"
+                    name="email"
+                    class="newsletter__input"
+                    placeholder="Email"
+                    required
+                  />
+                  <button type="submit" class="newsletter__button">SIGN UP</button>
+                </form>
+              </div>
+            </aside>
+          </div>
         </section>
 
         <section class="podcast" aria-label="Podcast episodes">
-        <div class="podcast-inner">
-        <div class="section-head">
-            <h2 class="podcast-heading">PODCAST</h2>
-            <a href="#" class="all-articles-link section-top-link">ALL EPISODES</a>
-        </div>
-        <div class="podcast-grid">
-            <!-- Card 1 -->
-            <article class="podcast-card">
-            <a class="podcast-link" href="#" aria-label="Open episode 5: The Problem of today’s cultural development">
-                <div class="cover">
-                <img src="assets/podcast-cover-1.png" alt="" loading="lazy" />
-                </div>
+          <div class="podcast-inner">
+            <div class="section-head">
+              <h2 class="podcast-heading">PODCAST</h2>
+              <a href="#" class="all-articles-link section-top-link">ALL EPISODES</a>
+            </div>
 
-                <h3 class="podcast-title"><span>The Problem of today’s</span><span class="title-line">cultural development</span></h3>
+            <div class="podcast-grid">
+              <article class="podcast-card">
+                <a
+                  class="podcast-link"
+                  href="#"
+                  aria-label="Open episode 5: The Problem of today's cultural development"
+                >
+                  <div class="cover">
+                    <img src="assets/podcast-cover-1.png" alt="" loading="lazy" />
+                  </div>
 
-                <dl class="podcast-meta">
-                <div class="meta-item">
-                    <dt class="meta-label">Date</dt>
-                    <dd class="meta-value">16.06.2022</dd>
-                </div>
-                <div class="meta-item">
-                    <dt class="meta-label">Duration</dt>
-                    <dd class="meta-value">1h 20 Min</dd>
-                </div>
-                </dl>
-            </a>
-            </article>
+                  <h3 class="podcast-title">
+                    <span>The Problem of today's</span>
+                    <span class="title-line">cultural development</span>
+                  </h3>
 
-            <!-- Card 2 -->
-            <article class="podcast-card">
-            <a class="podcast-link" href="#" aria-label="Open episode 4: The hidden messages of Jack Nielson">
-                <div class="cover">
-                <img src="assets/podcast-cover-2.png" alt="" loading="lazy" />
-                </div>
+                  <dl class="podcast-meta">
+                    <div class="meta-item">
+                      <dt class="meta-label">Date</dt>
+                      <dd class="meta-value">16.06.2022</dd>
+                    </div>
+                    <div class="meta-item">
+                      <dt class="meta-label">Duration</dt>
+                      <dd class="meta-value">1h 20 Min</dd>
+                    </div>
+                  </dl>
+                </a>
+              </article>
 
-                <h3 class="podcast-title"><span>The hidden messages of</span><span class="title-line">Jack Nielson</span></h3>
+              <article class="podcast-card">
+                <a class="podcast-link" href="#" aria-label="Open episode 4: The hidden messages of Jack Nielson">
+                  <div class="cover">
+                    <img src="assets/podcast-cover-2.png" alt="" loading="lazy" />
+                  </div>
 
-                <dl class="podcast-meta">
-                <div class="meta-item">
-                    <dt class="meta-label">Date</dt>
-                    <dd class="meta-value">16.06.2022</dd>
-                </div>
-                <div class="meta-item">
-                    <dt class="meta-label">Duration</dt>
-                    <dd class="meta-value">60 Min</dd>
-                </div>
-                </dl>
-            </a>
-            </article>
+                  <h3 class="podcast-title">
+                    <span>The hidden messages of</span>
+                    <span class="title-line">Jack Nielson</span>
+                  </h3>
 
-            <!-- Card 3 -->
-            <article class="podcast-card">
-            <a class="podcast-link" href="#" aria-label="Open episode 3: Behind the scenes of the street art culture">
-                <div class="cover">
-                <img src="assets/podcast-cover-3.png" alt="" loading="lazy" />
-                </div>
+                  <dl class="podcast-meta">
+                    <div class="meta-item">
+                      <dt class="meta-label">Date</dt>
+                      <dd class="meta-value">16.06.2022</dd>
+                    </div>
+                    <div class="meta-item">
+                      <dt class="meta-label">Duration</dt>
+                      <dd class="meta-value">60 Min</dd>
+                    </div>
+                  </dl>
+                </a>
+              </article>
 
-                <h3 class="podcast-title"><span>Behind the scenes of the</span><span class="title-line">street art culture</span></h3>
+              <article class="podcast-card">
+                <a
+                  class="podcast-link"
+                  href="#"
+                  aria-label="Open episode 3: Behind the scenes of the street art culture"
+                >
+                  <div class="cover">
+                    <img src="assets/podcast-cover-3.png" alt="" loading="lazy" />
+                  </div>
 
-                <dl class="podcast-meta">
-                <div class="meta-item">
-                    <dt class="meta-label">Date</dt>
-                    <dd class="meta-value">16.06.2022</dd>
-                </div>
-                <div class="meta-item">
-                    <dt class="meta-label">Duration</dt>
-                    <dd class="meta-value">45 Min</dd>
-                </div>
-                </dl>
-            </a>
-            </article>
-        </div>
-        </div>
+                  <h3 class="podcast-title">
+                    <span>Behind the scenes of the</span>
+                    <span class="title-line">street art culture</span>
+                  </h3>
+
+                  <dl class="podcast-meta">
+                    <div class="meta-item">
+                      <dt class="meta-label">Date</dt>
+                      <dd class="meta-value">16.06.2022</dd>
+                    </div>
+                    <div class="meta-item">
+                      <dt class="meta-label">Duration</dt>
+                      <dd class="meta-value">45 Min</dd>
+                    </div>
+                  </dl>
+                </a>
+              </article>
+            </div>
+          </div>
         </section>
 
         <section class="authors" aria-label="Authors">
-        <div class="authors-inner">
+          <div class="authors-inner">
             <div class="section-head">
-                <h2 class="authors-title">AUTHORS</h2>
-                <a href="#" class="all-articles-link section-top-link">ALL AUTHORS</a>
+              <h2 class="authors-title">AUTHORS</h2>
+              <a href="#" class="all-articles-link section-top-link">ALL AUTHORS</a>
             </div>
 
             <div class="authors-grid">
-            <!-- Row 1 -->
-            <article class="author-row">
+              <article class="author-row">
                 <div class="author-cell author-left">
-                <img class="author-avatar" src="assets/Jacob Gronberg.png" alt="" loading="lazy" />
-                <div class="author-info">
+                  <img class="author-avatar" src="assets/Jacob Gronberg.png" alt="Portrait of Jakob Grønberg" loading="lazy" />
+                  <div class="author-info">
                     <h3 class="author-name">Jakob Grønberg</h3>
                     <p class="author-meta">
-                    <span class="meta-label">Job</span> Artist
-                    <span class="meta-label">City</span> Berlin
+                      <span class="meta-label">Job</span> Artist
+                      <span class="meta-label">City</span> Berlin
                     </p>
-                </div>
+                  </div>
                 </div>
 
                 <div class="author-cell author-right">
-                <img class="author-avatar" src="assets/Anna Nielsen.png" alt="" loading="lazy" />
-                <div class="author-info">
+                  <img class="author-avatar" src="assets/Anna Nielsen.png" alt="Portrait of Anna Nielsen" loading="lazy" />
+                  <div class="author-info">
                     <h3 class="author-name">Anna Nielsen</h3>
                     <p class="author-meta">
-                    <span class="meta-label">Job</span> Artist
-                    <span class="meta-label">City</span> Copenhagen
+                      <span class="meta-label">Job</span> Artist
+                      <span class="meta-label">City</span> Copenhagen
                     </p>
+                  </div>
                 </div>
-                </div>
-            </article>
+              </article>
 
-            <!-- Row 2 -->
-            <article class="author-row">
+              <article class="author-row">
                 <div class="author-cell author-left">
-                <img class="author-avatar" src="assets/Anne Henry.png" alt="" loading="lazy" />
-                <div class="author-info">
+                  <img class="author-avatar" src="assets/Anne Henry.png" alt="Portrait of Anne Henry" loading="lazy" />
+                  <div class="author-info">
                     <h3 class="author-name">Anne Henry</h3>
                     <p class="author-meta">
-                    <span class="meta-label">Job</span> Photograph
-                    <span class="meta-label">City</span> New York
+                      <span class="meta-label">Job</span> Photograph
+                      <span class="meta-label">City</span> New York
                     </p>
-                </div>
+                  </div>
                 </div>
 
                 <div class="author-cell author-right">
-                <img class="author-avatar" src="assets/Louise Jensen.png" alt="" loading="lazy" />
-                <div class="author-info">
+                  <img class="author-avatar" src="assets/Louise Jensen.png" alt="Portrait of Louise Jensen" loading="lazy" />
+                  <div class="author-info">
                     <h3 class="author-name">Louise Jensen</h3>
                     <p class="author-meta">
-                    <span class="meta-label">Job</span> Photograph
-                    <span class="meta-label">City</span> Copenhagen
+                      <span class="meta-label">Job</span> Photograph
+                      <span class="meta-label">City</span> Copenhagen
                     </p>
+                  </div>
                 </div>
-                </div>
-            </article>
+              </article>
 
-            <!-- Row 3 -->
-            <article class="author-row">
+              <article class="author-row">
                 <div class="author-cell author-left">
-                <img class="author-avatar" src="assets/Jane Cooper.png" alt="" loading="lazy" />
-                <div class="author-info">
+                  <img class="author-avatar" src="assets/Jane Cooper.png" alt="Portrait of Jane Cooper" loading="lazy" />
+                  <div class="author-info">
                     <h3 class="author-name">Jane Cooper</h3>
                     <p class="author-meta">
-                    <span class="meta-label">Job</span> Artist
-                    <span class="meta-label">City</span> Berlin
+                      <span class="meta-label">Job</span> Artist
+                      <span class="meta-label">City</span> Berlin
                     </p>
-                </div>
+                  </div>
                 </div>
 
                 <div class="author-cell author-right">
-                <img class="author-avatar" src="assets/Cristofer Vaccaro.png" alt="" loading="lazy" />
-                <div class="author-info">
+                  <img
+                    class="author-avatar"
+                    src="assets/Cristofer Vaccaro.png"
+                    alt="Portrait of Cristofer Vaccaro"
+                    loading="lazy"
+                  />
+                  <div class="author-info">
                     <h3 class="author-name">Cristofer Vaccaro</h3>
                     <p class="author-meta">
-                    <span class="meta-label">Job</span> Artist
-                    <span class="meta-label">City</span> Rome
+                      <span class="meta-label">Job</span> Artist
+                      <span class="meta-label">City</span> Rome
                     </p>
+                  </div>
                 </div>
-                </div>
-            </article>
+              </article>
             </div>
-        </div>
+          </div>
         </section>
+      </main>
+    </div>
 
-
-            </main>
+    <footer class="footer">
+      <div class="footer-ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span></span>
         </div>
-        <footer class="footer">
-        <div class="footer-ticker" aria-hidden="true">
-            <div class="ticker-track">
-                <span id="footer-message"></span>
-            </div>
+      </div>
+
+      <div class="footer-inner">
+        <div class="footer-top">
+          <div class="footer-heading">
+            <h2>
+              <span>DESIGN NEWS TO</span>
+              <span class="title-line">YOUR INBOX</span>
+            </h2>
+          </div>
+
+          <form class="footer-form" action="#" method="post">
+            <label class="sr-only" for="footerEmail">Email</label>
+            <input id="footerEmail" type="email" name="email" placeholder="Email" required />
+            <button type="submit">SIGN UP</button>
+          </form>
         </div>
-        <div class="footer-inner">
 
-            <!-- top row -->
-            <div class="footer-top">
+        <div class="footer-links">
+          <div class="footer-brand">
+            <h3>FYRRE MAGAZINE</h3>
+          </div>
 
-            <div class="footer-heading">
-               <h2><span>DESIGN NEWS TO</span><span class="title-line">YOUR INBOX</span></h2>
-            </div>
+          <div class="footer-links-grid">
+            <nav class="footer-col footer-nav" aria-label="Footer links column 1">
+              <a href="#">Art</a>
+              <a href="#">Design</a>
+              <a href="#">Architecture</a>
+            </nav>
 
-            <form class="footer-form" action="#" method="post">
-                <label class="sr-only" for="footerEmail">Email</label>
-                <input id="footerEmail" type="email" name="email" placeholder="Email" required />
-                <button type="submit">SIGN UP</button>
-            </form>
-            </div>
+            <nav class="footer-col footer-nav" aria-label="Footer links column 2">
+              <a href="#">Magazine</a>
+              <a href="#">Podcast</a>
+              <a href="#">Authors</a>
+            </nav>
 
-            <!-- links row -->
-            <div class="footer-links">
-            <div class="footer-brand">
-                <h3>FYRRE MAGAZINE</h3>
-            </div>
-
-            <div class="footer-links-grid">
-                <nav class="footer-col footer-nav" aria-label="Footer links column 1">
-                    <a href="#">Art</a>
-                    <a href="#">Design</a>
-                    <a href="#">Architecture</a>
-                </nav>
-
-                <nav class="footer-col footer-nav" aria-label="Footer links column 2">
-                    <a href="#">Magazine</a>
-                    <a href="#">Podcast</a>
-                    <a href="#">Authors</a>
-                </nav>
-
-                <nav class="footer-col footer-nav" aria-label="Footer links column 3">
-                    <a href="#">Styleguide</a>
-                    <a href="#">Licensing</a>
-                    <a href="#">Changelog</a>
-                </nav>
-            </div>
-            </div>
-
-            <!-- bottom row -->
-            <div class="footer-bottom">
-            <p>© Made by Pawel Gola – Powered by Webflow</p>
-
-            <div class="footer-socials" aria-label="Social links">
-                <a href="#" aria-label="Instagram" class="social">
-                    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
-                        <rect x="3.5" y="3.5" width="17" height="17" rx="5.5" stroke="currentColor" stroke-width="2"></rect>
-                        <circle cx="12" cy="12" r="4.25" stroke="currentColor" stroke-width="2"></circle>
-                        <circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"></circle>
-                    </svg>
-                </a>
-                <a href="#" aria-label="Twitter" class="social">
-                    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
-                        <path d="M4 4L10.95 13.3L4.35 20H6.75L12.02 14.65L16 20H20L12.67 10.15L18.8 4H16.4L11.6 8.8L8 4H4Z" fill="currentColor"></path>
-                    </svg>
-                </a>
-                <a href="#" aria-label="YouTube" class="social">
-                    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
-                        <rect x="3" y="6.5" width="18" height="11" rx="3" fill="currentColor"></rect>
-                        <path d="M10 9.5V14.5L14.5 12L10 9.5Z" fill="#111111"></path>
-                    </svg>
-                </a>
-                <a href="#" aria-label="RSS" class="social">
-                    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
-                        <circle cx="6.2" cy="17.8" r="1.8" fill="currentColor"></circle>
-                        <path d="M4.5 11.5C8.65 11.5 12 14.85 12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-                        <path d="M4.5 6C11.95 6 18 12.05 18 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-                    </svg>
-                </a>
-            </div>
-            </div>
+            <nav class="footer-col footer-nav" aria-label="Footer links column 3">
+              <a href="#">Styleguide</a>
+              <a href="#">Licensing</a>
+              <a href="#">Changelog</a>
+            </nav>
+          </div>
         </div>
-        </footer>
-        <script src="ticker.js"></script>
-    </body>
 
+        <div class="footer-bottom">
+          <p>© Made by Pawel Gola - Powered by Webflow</p>
+
+          <div class="footer-socials" aria-label="Social links">
+            <a href="#" aria-label="Instagram" class="social">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
+                <rect x="3.5" y="3.5" width="17" height="17" rx="5.5" stroke="currentColor" stroke-width="2"></rect>
+                <circle cx="12" cy="12" r="4.25" stroke="currentColor" stroke-width="2"></circle>
+                <circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"></circle>
+              </svg>
+            </a>
+            <a href="#" aria-label="Twitter" class="social">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
+                <path d="M4 4L10.95 13.3L4.35 20H6.75L12.02 14.65L16 20H20L12.67 10.15L18.8 4H16.4L11.6 8.8L8 4H4Z" fill="currentColor"></path>
+              </svg>
+            </a>
+            <a href="#" aria-label="YouTube" class="social">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
+                <rect x="3" y="6.5" width="18" height="11" rx="3" fill="currentColor"></rect>
+                <path d="M10 9.5V14.5L14.5 12L10 9.5Z" fill="#111111"></path>
+              </svg>
+            </a>
+            <a href="#" aria-label="RSS" class="social">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
+                <circle cx="6.2" cy="17.8" r="1.8" fill="currentColor"></circle>
+                <path d="M4.5 11.5C8.65 11.5 12 14.85 12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M4.5 6C11.95 6 18 12.05 18 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="ticker.js"></script>
+  </body>
 </html>
