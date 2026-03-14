@@ -1,38 +1,54 @@
-const heroTicker = document.getElementById("newsmessage");
-const footerTrack = document.querySelector(".ticker-track");
+const heroTicker = document.querySelector(".newsticker__track");
+const footerTicker = document.querySelector(".footer .ticker-track");
 
 const heroLine = "Lorem ipsum dolor sit amet consectetur adipisicing elit";
+const heroUnit = `${heroLine} +++ `;
 const footerUnit = "NEWSLETTER +++ ";
 
-if (heroTicker) {
-  heroTicker.textContent = Array.from({ length: 3 }, () => heroLine).join(" +++ ");
-}
-
-function buildFooterTicker() {
-  if (!footerTrack) {
+function buildTicker(track, unit, speed, className = "") {
+  if (!track) {
     return;
   }
 
   const sample = document.createElement("span");
-  sample.textContent = footerUnit.repeat(2);
-  footerTrack.replaceChildren(sample);
+  sample.className = className;
+  sample.textContent = unit;
+  track.replaceChildren(sample);
 
   const sampleWidth = sample.getBoundingClientRect().width || 1;
-  const viewportWidth = footerTrack.parentElement?.getBoundingClientRect().width || window.innerWidth;
-  const repeatCount = Math.max(2, Math.ceil((viewportWidth * 2) / sampleWidth));
-  const evenRepeatCount = repeatCount % 2 === 0 ? repeatCount : repeatCount + 1;
+  const viewportWidth = track.parentElement?.getBoundingClientRect().width || window.innerWidth;
+  const repeatCount = Math.max(2, Math.ceil(viewportWidth / sampleWidth) + 1);
+  const content = unit.repeat(repeatCount);
 
-  footerTrack.replaceChildren(
-    ...Array.from({ length: evenRepeatCount }, () => {
-      const item = document.createElement("span");
-      item.textContent = footerUnit.repeat(2);
-      return item;
-    })
-  );
+  const firstHalf = document.createElement("span");
+  firstHalf.className = className;
+  firstHalf.textContent = content;
 
-  const duration = Math.max(18, footerTrack.scrollWidth / 90);
-  footerTrack.style.setProperty("--ticker-duration", `${duration}s`);
+  const secondHalf = document.createElement("span");
+  secondHalf.className = className;
+  secondHalf.textContent = content;
+
+  if (track === heroTicker) {
+    firstHalf.id = "newsmessage";
+  }
+
+  track.replaceChildren(firstHalf, secondHalf);
+
+  const halfWidth = firstHalf.getBoundingClientRect().width || 1;
+  const duration = Math.max(18, halfWidth / speed);
+  track.style.setProperty("--ticker-duration", `${duration}s`);
 }
 
-buildFooterTicker();
-window.addEventListener("resize", buildFooterTicker);
+function buildTickers() {
+  buildTicker(heroTicker, heroUnit, 110, "newsflash");
+  buildTicker(footerTicker, footerUnit, 90);
+}
+
+let resizeTimer;
+
+buildTickers();
+
+window.addEventListener("resize", () => {
+  window.clearTimeout(resizeTimer);
+  resizeTimer = window.setTimeout(buildTickers, 200);
+});
