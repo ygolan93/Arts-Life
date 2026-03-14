@@ -1,31 +1,49 @@
-const originMessage =
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit+++";
-const gap = "  ";
-const counter = 3;
-const newsMessage = document.getElementById("newsmessage");
+const heroMessage = "Lorem ipsum dolor sit amet consectetur adipisicing elit";
+const heroSeparator = " +++ ";
+const footerMessage = "NEWSLETTER";
+const footerSeparator = " +++ ";
 
-if (newsMessage) {
-  newsMessage.textContent = `${originMessage}${gap}`.repeat(counter);
+const heroTicker = document.getElementById("newsmessage");
+const footerTrack = document.querySelector(".ticker-track");
+
+if (heroTicker) {
+  heroTicker.textContent = Array.from({ length: 3 }, () => heroMessage).join(heroSeparator);
 }
 
-const originMessage2 = "NEWSLETTER+++";
-const gap2 = "     ";
-
-function generateTicker() {
-  const textElement = document.getElementById("footer-message");
-
-  if (!textElement) {
+function buildFooterTicker() {
+  if (!footerTrack) {
     return;
   }
 
-  const screenWidth = window.innerWidth;
-  const approxCharWidth = 12;
-  const messageWidth = (originMessage2.length + gap2.length) * approxCharWidth;
-  const repeatCount = Math.ceil(screenWidth / messageWidth) + 4;
+  const unit = `${footerMessage}${footerSeparator}`;
+  const measurement = document.createElement("span");
+  measurement.textContent = unit.repeat(2);
+  footerTrack.innerHTML = "";
+  footerTrack.appendChild(measurement);
 
-  textElement.textContent = (originMessage2 + gap2).repeat(repeatCount);
+  const firstWidth = measurement.getBoundingClientRect().width;
+  const viewportWidth = footerTrack.parentElement
+    ? footerTrack.parentElement.getBoundingClientRect().width
+    : window.innerWidth;
+
+  const baseCopies = Math.max(2, Math.ceil((viewportWidth * 2) / Math.max(firstWidth, 1)));
+  const minCopies = baseCopies % 2 === 0 ? baseCopies : baseCopies + 1;
+
+  footerTrack.innerHTML = "";
+
+  for (let index = 0; index < minCopies; index += 1) {
+    const item = document.createElement("span");
+    item.textContent = unit.repeat(2);
+    footerTrack.appendChild(item);
+  }
+
+  const totalWidth = footerTrack.scrollWidth;
+  const speed = 90;
+  const duration = Math.max(18, totalWidth / speed);
+
+  footerTrack.style.setProperty("--ticker-duration", `${duration}s`);
 }
 
-generateTicker();
-window.addEventListener("DOMContentLoaded", generateTicker);
-window.addEventListener("resize", generateTicker);
+buildFooterTicker();
+window.addEventListener("load", buildFooterTicker);
+window.addEventListener("resize", buildFooterTicker);
