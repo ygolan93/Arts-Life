@@ -7,12 +7,19 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="site-shell">
-      <header>
-        <h2>FYRRE MAGAZINE</h2>
-        <hr />
-      </header>
+    <header class="site-header">
+      <div class="site-shell">
+        <div class="header-inner">
+          <div class="header-row">
+            <div class="logo site-logo">FYRRE MAGAZINE</div>
+          </div>
 
+          <div class="header-divider"></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="site-shell">
       <main>
         <section class="hero">
           <div class="hero__inner">
@@ -47,7 +54,7 @@
                 <div class="lead-meta">
                   <div class="column"><strong>Text </strong> Jacob Gronberg</div>
                   <div class="column"><strong>Date </strong> 16. March 2022</div>
-                  <div class="column article-time"><strong>Duration </strong>1 Min</div>
+                  <div class="column article-time"><strong>Read </strong>1 Min</div>
                   <div class="space-to-label"></div>
                   <div class="column"><span class="label">LABEL</span></div>
                 </div>
@@ -89,7 +96,7 @@
                     <div class="article-meta">
                       <div class="column"><strong>Text </strong> Jacob Gronberg</div>
                       <div class="column"><strong>Date </strong> 16. March 2022</div>
-                      <div class="column article-time"><strong>Duration </strong>1 Min</div>
+                      <div class="column article-time"><strong>Read </strong>1 Min</div>
                       <div class="space-to-label"></div>
                       <div class="column"><span class="label">ART</span></div>
                     </div>
@@ -109,7 +116,7 @@
                     />
                   </div>
 
-                  <div class="article-text">
+                  <div class="article-text" id="article-museums">
                     <h4>The best art museums</h4>
                     <p>
                       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aperiam expedita odio atque
@@ -120,7 +127,7 @@
                     <div class="article-meta">
                       <div class="column"><strong>Text </strong> Jacob Gronberg</div>
                       <div class="column"><strong>Date </strong> 16. March 2022</div>
-                      <div class="column article-time"><strong>Duration </strong>1 Min</div>
+                      <div class="column article-time"><strong>Read </strong>1 Min</div>
                       <div class="space-to-label"></div>
                       <div class="column"><span class="label">ART</span></div>
                     </div>
@@ -140,7 +147,7 @@
                     />
                   </div>
 
-                  <div class="article-text">
+                  <div class="article-text" id="article-devil">
                     <h4>The devil is in the details</h4>
                     <p>
                       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aperiam expedita odio atque
@@ -151,7 +158,7 @@
                     <div class="article-meta">
                       <div class="column"><strong>Text </strong> Jacob Gronberg</div>
                       <div class="column"><strong>Date </strong> 16. March 2022</div>
-                      <div class="column article-time"><strong>Duration </strong>1 Min</div>
+                      <div class="column article-time"><strong>Read </strong>1 Min</div>
                       <div class="space-to-label"></div>
                       <div class="column"><span class="label">SCULPTURES</span></div>
                     </div>
@@ -171,7 +178,7 @@
                     />
                   </div>
 
-                  <div class="article-text">
+                  <div class="article-text" id="article-hope">
                     <h4>An indestructible hope</h4>
                     <p>
                       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aperiam expedita odio atque
@@ -182,7 +189,7 @@
                     <div class="article-meta">
                       <div class="column"><strong>Text </strong> Jacob Gronberg</div>
                       <div class="column"><strong>Date </strong> 16. March 2022</div>
-                      <div class="column article-time"><strong>Duration </strong>1 Min</div>
+                      <div class="column article-time"><strong>Read </strong>1 Min</div>
                       <div class="space-to-label"></div>
                       <div class="column"><span class="label">ART</span></div>
                     </div>
@@ -202,7 +209,7 @@
                     />
                   </div>
 
-                  <div class="article-text">
+                  <div class="article-text" id="article-festivals">
                     <h4>Street art festivals</h4>
                     <p>
                       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aperiam expedita odio atque
@@ -213,7 +220,7 @@
                     <div class="article-meta">
                       <div class="column"><strong>Text </strong> Jacob Gronberg</div>
                       <div class="column"><strong>Date </strong> 16. March 2022</div>
-                      <div class="column article-time"><strong>Duration </strong>1 Min</div>
+                      <div class="column article-time"><strong>Read </strong>1 Min</div>
                       <div class="space-to-label"></div>
                       <div class="column"><span class="label">STREET ART</span></div>
                     </div>
@@ -233,7 +240,7 @@
                     />
                   </div>
 
-                  <div class="article-text">
+                  <div class="article-text" id="article-street-art">
                     <h4>Through the eyes of street artists</h4>
                     <p>
                       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aperiam expedita odio atque
@@ -244,7 +251,7 @@
                     <div class="article-meta">
                       <div class="column"><strong>Text </strong> Jacob Gronberg</div>
                       <div class="column"><strong>Date </strong> 16. March 2022</div>
-                      <div class="column article-time"><strong>Duration </strong>1 Min</div>
+                      <div class="column article-time"><strong>Read </strong>1 Min</div>
                       <div class="space-to-label"></div>
                       <div class="column"><span class="label">STREET ART</span></div>
                     </div>
@@ -280,7 +287,7 @@
                     <a class="popular__link" href="#">
                       <div class="popular__num" aria-hidden="true">01</div>
                       <div class="popular__body">
-                        <h4 class="popular__title">Street art festival</h4>
+                        <span class="popular__title"><h4>Street art festival</h4></span>
                         <div class="popular__meta"><strong>Text</strong> Cristofer Vaccaro</div>
                       </div>
                     </a>
@@ -290,7 +297,7 @@
                     <a class="popular__link" href="#">
                       <div class="popular__num" aria-hidden="true">02</div>
                       <div class="popular__body">
-                        <h4 class="popular__title">Hope dies last</h4>
+                        <span class="popular__title"><h4>Hope dies last</h4></span>
                         <div class="popular__meta"><strong>Text</strong> Anne Henry</div>
                       </div>
                     </a>
@@ -300,7 +307,7 @@
                     <a class="popular__link" href="#">
                       <div class="popular__num" aria-hidden="true">03</div>
                       <div class="popular__body">
-                        <h4 class="popular__title">Artists who want to rise above</h4>
+                        <span class="popular__title"><h4>Artists who want to rise above</h4></span>
                         <div class="popular__meta"><strong>Text</strong> Anna Nielsen</div>
                       </div>
                     </a>
@@ -361,7 +368,7 @@
                       <dd class="meta-value">16.06.2022</dd>
                     </div>
                     <div class="meta-item">
-                      <dt class="meta-label">Duration</dt>
+                      <dt class="meta-label">Read</dt>
                       <dd class="meta-value">1h 20 Min</dd>
                     </div>
                   </dl>
@@ -385,7 +392,7 @@
                       <dd class="meta-value">16.06.2022</dd>
                     </div>
                     <div class="meta-item">
-                      <dt class="meta-label">Duration</dt>
+                      <dt class="meta-label">Read</dt>
                       <dd class="meta-value">60 Min</dd>
                     </div>
                   </dl>
@@ -413,7 +420,7 @@
                       <dd class="meta-value">16.06.2022</dd>
                     </div>
                     <div class="meta-item">
-                      <dt class="meta-label">Duration</dt>
+                      <dt class="meta-label">Read</dt>
                       <dd class="meta-value">45 Min</dd>
                     </div>
                   </dl>
