@@ -41,18 +41,18 @@ body {
 
 .logo {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   letter-spacing: 0.08em;
 }
 
 .header-divider {
   width: 105.3%;
   height: 1px;
-  background: #000;
+  background: var(--color-black);
   flex-shrink: 0;
 }
 
 body {
   /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-base);
 }

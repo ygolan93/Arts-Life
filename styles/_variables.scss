@@ -1,15 +1,32 @@
 :root {
+  --color-black: #000;
+  --color-white: #fff;
+  --color-text-strong: #111;
+  --color-border-strong: #1a1a1a;
+  --color-white-08: rgba(255, 255, 255, 0.08);
+  --color-white-12: rgba(255, 255, 255, 0.12);
+  --color-white-16: rgba(255, 255, 255, 0.16);
+  --color-white-18: rgba(255, 255, 255, 0.18);
+  --color-white-65: rgba(255, 255, 255, 0.65);
+  --color-white-70: rgba(255, 255, 255, 0.7);
+  --color-white-80: rgba(255, 255, 255, 0.8);
+  --font-family-base: Arial, Helvetica, sans-serif;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
   --ui-ease: cubic-bezier(0.22, 1, 0.36, 1);
   --ui-duration-fast: 140ms;
   --ui-duration-base: 220ms;
   --ui-duration-slow: 320ms;
+  --ui-duration-arrow: 180ms;
   --ui-lift: translateY(-3px);
   --ui-lift-soft: translateY(-2px);
   --ui-press: translateY(-1px) scale(0.99);
   --ui-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
   --ui-shadow-soft: 0 10px 24px rgba(0, 0, 0, 0.07);
   --ui-focus-ring: 0 0 0 3px rgba(17, 17, 17, 0.14);
-  --ui-focus-outline: 2px solid #111;
+  --ui-focus-outline: 2px solid var(--color-text-strong);
   --ui-surface-hover: #f6f6f6;
   --ui-surface-press: #efefef;
 }
