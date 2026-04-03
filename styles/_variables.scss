@@ -1,0 +1,15 @@
+:root {
+  --ui-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ui-duration-fast: 140ms;
+  --ui-duration-base: 220ms;
+  --ui-duration-slow: 320ms;
+  --ui-lift: translateY(-3px);
+  --ui-lift-soft: translateY(-2px);
+  --ui-press: translateY(-1px) scale(0.99);
+  --ui-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+  --ui-shadow-soft: 0 10px 24px rgba(0, 0, 0, 0.07);
+  --ui-focus-ring: 0 0 0 3px rgba(17, 17, 17, 0.14);
+  --ui-focus-outline: 2px solid #111;
+  --ui-surface-hover: #f6f6f6;
+  --ui-surface-press: #efefef;
+}
