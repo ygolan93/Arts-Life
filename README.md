@@ -1,72 +1,48 @@
-# \# Arts \& Life
+# Arts & Life
 
-# 
+Live Demo:  
+https://ygolan93.github.io/Arts-Life/
 
-# Live Demo:  
+## Overview
 
-# https://ygolan93.github.io/Arts-Life/
+A pixel-perfect front-end implementation of a magazine-style layout based on a Figma design.
 
-# 
+This project focuses on accurate design translation, clean architecture, and attention to UI detail — including spacing, alignment, typography, and responsive behavior.
 
-# \## Overview
+## What I Focused On
 
-# 
+- Translating Figma design into code with high visual accuracy
+- Maintaining consistent spacing, alignment, and typography
+- Building a clean and scalable SCSS structure
+- Avoiding layout drift across screen sizes
+- Keeping the UI behavior predictable and stable
 
-# Pixel-perfect front-end implementation of a magazine-style layout based on a Figma reference.
+## Key Features
 
-# 
+- Pixel-perfect layout aligned with the original design
+- Fully responsive across desktop and smaller screens
+- Modular SCSS architecture (base / layout / components / responsive)
+- Centralized design tokens (colors, spacing, motion)
+- Semantic HTML structure
+- Clean UI interactions and hover states
 
-# The project focuses on translating design into code with high visual accuracy, clean structure, and responsive behavior.
+## Tech Stack
 
-# 
+- HTML5
+- SCSS (modular architecture)
+- CSS (compiled)
+- GitHub Pages (deployment)
 
-# \## Key Features
+## Project Structure
 
-# 
+/assets – images and media  
+/scss – modular SCSS files (variables, base, layout, components, responsive)  
+index.html – main entry point  
 
-# \- Pixel-perfect layout matching the original design
+## Notes
 
-# \- Fully responsive across different screen sizes
+This project was built as part of a front-end implementation exercise with a strong emphasis on precision and structure rather than feature complexity.
 
-# \- Modular SCSS architecture
+## Author
 
-# \- Centralized design tokens (colors, spacing, motion)
-
-# \- Semantic HTML structure
-
-# \- Clean and consistent UI alignment
-
-# 
-
-# \## Stack
-
-# 
-
-# \- HTML5
-
-# \- SCSS (modular architecture)
-
-# \- Responsive layout
-
-# \- GitHub Pages (deployment)
-
-# 
-
-# \## Project Structure
-
-# 
-
-# /assets – images and media  
-
-# /scss – modular SCSS files (base, layout, components, variables, responsive)  
-
-# index.html – main entry point  
-
-# 
-
-# \## Author
-
-# 
-
-# Yonatan Golan
-
+Yonatan Golan
