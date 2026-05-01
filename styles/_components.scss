@@ -724,7 +724,7 @@
   }
 
   to {
-    transform: translateX(-50%);
+    transform: translateX(var(--ticker-distance, -50%));
   }
 }
 
