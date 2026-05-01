@@ -1,9 +1,9 @@
 const heroTicker = document.querySelector(".newsticker__track");
 const footerTicker = document.querySelector(".footer .ticker-track");
 
-const heroLine = "Lorem ipsum dolor sit amet consectetur adipisicing elit";
+const heroLine = "Lorem ipsum dolor sit amet, consectetur adipiscing elit";
 const heroUnit = `${heroLine} +++ `;
-const footerUnit = "NEWSLETTER +++ ";
+const footerUnit = "NEWSLETTER+++ ";
 
 function buildTicker(track, unit, speed, className = "") {
   if (!track) {

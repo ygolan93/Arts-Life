@@ -1,4 +1,4 @@
-/* =========================
+﻿/* =========================
    Base / Reset
 ========================= */
 *,
@@ -41,18 +41,30 @@ body {
 
 .logo {
   font-size: 20px;
-  font-weight: var(--font-weight-semibold);
+  font-weight: 600;
   letter-spacing: 0.08em;
 }
 
 .header-divider {
   width: 105.3%;
   height: 1px;
-  background: var(--color-black);
+  background: #000;
   flex-shrink: 0;
 }
 
 body {
   /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
-  font-family: var(--font-family-base);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a,
+button,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
 }

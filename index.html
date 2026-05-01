@@ -1,9 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Art&Life Magazine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://api.fontshare.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&amp;display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <script type="application/ld+json">
       {
@@ -26,14 +37,95 @@
       }
     </script>
   </head>
-  <body>
+  <body class="frontpage">
     <header class="site-header">
       <div class="site-shell">
         <div class="header-inner">
           <div class="header-row">
-            <div class="logo site-logo">FYRRE MAGAZINE</div>
+            <a class="logo site-logo" href="index.html">FYRRE MAGAZINE</a>
+            <div class="header-actions">
+              <nav class="header-nav" aria-label="Main navigation">
+                <a href="magazine.html">Magazine</a>
+                <a href="authors.html">Authors</a>
+                <a href="podcast.html">Podcast</a>
+              </nav>
+              <span class="header-separator" aria-hidden="true"></span>
+              <div class="header-socials" aria-label="Social links">
+                <a href="#" aria-label="Instagram" class="social">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
+                    <rect
+                      x="3.5"
+                      y="3.5"
+                      width="17"
+                      height="17"
+                      rx="5.5"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    ></rect>
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="4.25"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    ></circle>
+                    <circle
+                      cx="17.3"
+                      cy="6.7"
+                      r="1.3"
+                      fill="currentColor"
+                    ></circle>
+                  </svg>
+                </a>
+                <a href="#" aria-label="Twitter" class="social">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
+                    <path
+                      d="M4 4L10.95 13.3L4.35 20H6.75L12.02 14.65L16 20H20L12.67 10.15L18.8 4H16.4L11.6 8.8L8 4H4Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </a>
+                <a href="#" aria-label="YouTube" class="social">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
+                    <rect
+                      x="3"
+                      y="6.5"
+                      width="18"
+                      height="11"
+                      rx="3"
+                      fill="currentColor"
+                    ></rect>
+                    <path
+                      d="M10 9.5V14.5L14.5 12L10 9.5Z"
+                      fill="#ffffff"
+                    ></path>
+                  </svg>
+                </a>
+                <a href="#" aria-label="RSS" class="social">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
+                    <circle
+                      cx="6.2"
+                      cy="17.8"
+                      r="1.8"
+                      fill="currentColor"
+                    ></circle>
+                    <path
+                      d="M4.5 11.5C8.65 11.5 12 14.85 12 19"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    ></path>
+                    <path
+                      d="M4.5 6C11.95 6 18 12.05 18 19"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
           </div>
-
           <div class="header-divider"></div>
         </div>
       </div>
@@ -43,7 +135,15 @@
       <main>
         <section class="hero">
           <div class="hero__inner">
-            <h1>ART &amp; LIFE</h1>
+            <h1 class="hero-title">
+              <span class="sr-only">ART &amp; LIFE</span>
+              <img
+                src="assets/art-life-title.png"
+                alt=""
+                aria-hidden="true"
+                class="hero-title-image"
+              />
+            </h1>
             <div class="newsticker" aria-label="Latest news ticker">
               <span class="newsticker__label">NEWS TICKER+++</span>
               <div class="newsticker__viewport" aria-hidden="true">
@@ -65,16 +165,23 @@
               <div class="lead-article__body">
                 <div class="lead-article__summary">
                   <span class="lead-summary-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt magnam architecto maxime tenetur
-                    cum, aut harum atque. Hic nostrum cumque, vero, recusandae placeat quas voluptatem quibusdam
-                    corrupti, cupiditate possimus dolorem?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Sunt magnam architecto maxime tenetur cum, aut harum atque.
+                    Hic nostrum cumque, vero, recusandae placeat quas voluptatem
+                    quibusdam corrupti, cupiditate possimus dolorem?
                   </span>
                 </div>
 
                 <div class="lead-meta">
-                  <div class="column"><strong>Text </strong> Jacob Gronberg</div>
-                  <div class="column"><strong>Date </strong> 16. March 2022</div>
-                  <div class="column article-time"><strong>Duration </strong>1 Min</div>
+                  <div class="column">
+                    <strong>Text </strong> Jacob Gronberg
+                  </div>
+                  <div class="column">
+                    <strong>Date </strong> 16. March 2022
+                  </div>
+                  <div class="column article-time">
+                    <strong>Duration </strong>1 Min
+                  </div>
                   <div class="space-to-label"></div>
                   <div class="column"><span class="label">LABEL</span></div>
                 </div>
@@ -108,15 +215,23 @@
                   <div class="article-text" id="article-hope">
                     <h4>Hope dies last</h4>
                     <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aperiam expedita odio atque
-                      nisi laborum sit eligendi necessitatibus consequatur explicabo laudantium unde. Esse architecto,
-                      ducimus quisquam perspiciatis ex nobis.
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Nobis, sed aperiam expedita odio atque nisi laborum sit
+                      eligendi necessitatibus consequatur explicabo laudantium
+                      unde. Esse architecto, ducimus quisquam perspiciatis ex
+                      nobis.
                     </p>
 
                     <div class="article-meta">
-                      <div class="column"><strong>Text </strong> Jacob Gronberg</div>
-                      <div class="column"><strong>Date </strong> 16. March 2022</div>
-                      <div class="column article-time"><strong>Read </strong>1 Min</div>
+                      <div class="column">
+                        <strong>Text </strong> Jacob Gronberg
+                      </div>
+                      <div class="column">
+                        <strong>Date </strong> 16. March 2022
+                      </div>
+                      <div class="column article-time">
+                        <strong>Read </strong>1 Min
+                      </div>
                       <div class="space-to-label"></div>
                       <div class="column"><span class="label">ART</span></div>
                     </div>
@@ -139,17 +254,27 @@
                   <div class="article-text" id="article-museums">
                     <h4>The best art museums</h4>
                     <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aperiam expedita odio atque
-                      nisi laborum sit eligendi necessitatibus consequatur explicabo laudantium unde. Esse architecto,
-                      ducimus quisquam perspiciatis ex nobis.
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Nobis, sed aperiam expedita odio atque nisi laborum sit
+                      eligendi necessitatibus consequatur explicabo laudantium
+                      unde. Esse architecto, ducimus quisquam perspiciatis ex
+                      nobis.
                     </p>
 
                     <div class="article-meta">
-                      <div class="column"><strong>Text </strong> Jacob Gronberg</div>
-                      <div class="column"><strong>Date </strong> 16. March 2022</div>
-                      <div class="column article-time"><strong>Read </strong>1 Min</div>
+                      <div class="column">
+                        <strong>Text </strong> Jacob Gronberg
+                      </div>
+                      <div class="column">
+                        <strong>Date </strong> 16. March 2022
+                      </div>
+                      <div class="column article-time">
+                        <strong>Read </strong>1 Min
+                      </div>
                       <div class="space-to-label"></div>
-                      <div class="column"><span class="label">SCULPTURES</span></div>
+                      <div class="column">
+                        <span class="label">SCULPTURES</span>
+                      </div>
                     </div>
                   </div>
                 </a>
@@ -170,15 +295,23 @@
                   <div class="article-text" id="article-devil">
                     <h4>The devil is in the details</h4>
                     <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aperiam expedita odio atque
-                      nisi laborum sit eligendi necessitatibus consequatur explicabo laudantium unde. Esse architecto,
-                      ducimus quisquam perspiciatis ex nobis.
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Nobis, sed aperiam expedita odio atque nisi laborum sit
+                      eligendi necessitatibus consequatur explicabo laudantium
+                      unde. Esse architecto, ducimus quisquam perspiciatis ex
+                      nobis.
                     </p>
 
                     <div class="article-meta">
-                      <div class="column"><strong>Text </strong> Jacob Gronberg</div>
-                      <div class="column"><strong>Date </strong> 16. March 2022</div>
-                      <div class="column article-time"><strong>Read </strong>1 Min</div>
+                      <div class="column">
+                        <strong>Text </strong> Jacob Gronberg
+                      </div>
+                      <div class="column">
+                        <strong>Date </strong> 16. March 2022
+                      </div>
+                      <div class="column article-time">
+                        <strong>Read </strong>1 Min
+                      </div>
                       <div class="space-to-label"></div>
                       <div class="column"><span class="label">ART</span></div>
                     </div>
@@ -198,18 +331,26 @@
                     />
                   </div>
 
-                  <div class="article-text" id="article-hope">
+                  <div class="article-text" id="article-indestructible">
                     <h4>An indestructible hope</h4>
                     <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aperiam expedita odio atque
-                      nisi laborum sit eligendi necessitatibus consequatur explicabo laudantium unde. Esse architecto,
-                      ducimus quisquam perspiciatis ex nobis.
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Nobis, sed aperiam expedita odio atque nisi laborum sit
+                      eligendi necessitatibus consequatur explicabo laudantium
+                      unde. Esse architecto, ducimus quisquam perspiciatis ex
+                      nobis.
                     </p>
 
                     <div class="article-meta">
-                      <div class="column"><strong>Text </strong> Jacob Gronberg</div>
-                      <div class="column"><strong>Date </strong> 16. March 2022</div>
-                      <div class="column article-time"><strong>Read </strong>1 Min</div>
+                      <div class="column">
+                        <strong>Text </strong> Jacob Gronberg
+                      </div>
+                      <div class="column">
+                        <strong>Date </strong> 16. March 2022
+                      </div>
+                      <div class="column article-time">
+                        <strong>Read </strong>1 Min
+                      </div>
                       <div class="space-to-label"></div>
                       <div class="column"><span class="label">ART</span></div>
                     </div>
@@ -232,17 +373,27 @@
                   <div class="article-text" id="article-festivals">
                     <h4>Street art festivals</h4>
                     <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aperiam expedita odio atque
-                      nisi laborum sit eligendi necessitatibus consequatur explicabo laudantium unde. Esse architecto,
-                      ducimus quisquam perspiciatis ex nobis.
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Nobis, sed aperiam expedita odio atque nisi laborum sit
+                      eligendi necessitatibus consequatur explicabo laudantium
+                      unde. Esse architecto, ducimus quisquam perspiciatis ex
+                      nobis.
                     </p>
 
                     <div class="article-meta">
-                      <div class="column"><strong>Text </strong> Jacob Gronberg</div>
-                      <div class="column"><strong>Date </strong> 16. March 2022</div>
-                      <div class="column article-time"><strong>Read </strong>1 Min</div>
+                      <div class="column">
+                        <strong>Text </strong> Jacob Gronberg
+                      </div>
+                      <div class="column">
+                        <strong>Date </strong> 16. March 2022
+                      </div>
+                      <div class="column article-time">
+                        <strong>Read </strong>1 Min
+                      </div>
                       <div class="space-to-label"></div>
-                      <div class="column"><span class="label">STREET ART</span></div>
+                      <div class="column">
+                        <span class="label">STREET ART</span>
+                      </div>
                     </div>
                   </div>
                 </a>
@@ -263,17 +414,27 @@
                   <div class="article-text" id="article-street-art">
                     <h4>Through the eyes of street artists</h4>
                     <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sed aperiam expedita odio atque
-                      nisi laborum sit eligendi necessitatibus consequatur explicabo laudantium unde. Esse architecto,
-                      ducimus quisquam perspiciatis ex nobis.
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Nobis, sed aperiam expedita odio atque nisi laborum sit
+                      eligendi necessitatibus consequatur explicabo laudantium
+                      unde. Esse architecto, ducimus quisquam perspiciatis ex
+                      nobis.
                     </p>
 
                     <div class="article-meta">
-                      <div class="column"><strong>Text </strong> Jacob Gronberg</div>
-                      <div class="column"><strong>Date </strong> 16. March 2022</div>
-                      <div class="column article-time"><strong>Read </strong>1 Min</div>
+                      <div class="column">
+                        <strong>Text </strong> Jacob Gronberg
+                      </div>
+                      <div class="column">
+                        <strong>Date </strong> 16. March 2022
+                      </div>
+                      <div class="column article-time">
+                        <strong>Read </strong>1 Min
+                      </div>
                       <div class="space-to-label"></div>
-                      <div class="column"><span class="label">STREET ART</span></div>
+                      <div class="column">
+                        <span class="label">STREET ART</span>
+                      </div>
                     </div>
                   </div>
                 </a>
@@ -299,7 +460,9 @@
 
               <div class="popular" aria-labelledby="popular-title">
                 <div class="popular__header">
-                  <h5 id="popular-title" class="popular__kicker">MOST POPULAR</h5>
+                  <h5 id="popular-title" class="popular__kicker">
+                    MOST POPULAR
+                  </h5>
                 </div>
 
                 <div class="popular__list">
@@ -307,8 +470,10 @@
                     <a class="popular__link" href="#">
                       <div class="popular__num" aria-hidden="true">01</div>
                       <div class="popular__body">
-                        <span class="popular__title"><h4>Street art festival</h4></span>
-                        <div class="popular__meta"><strong>Text</strong> Cristofer Vaccaro</div>
+                        <h4 class="popular__title">Street art festival</h4>
+                        <div class="popular__meta">
+                          <strong>Text</strong> Cristofer Vaccaro
+                        </div>
                       </div>
                     </a>
                   </article>
@@ -317,8 +482,10 @@
                     <a class="popular__link" href="#">
                       <div class="popular__num" aria-hidden="true">02</div>
                       <div class="popular__body">
-                        <span class="popular__title"><h4>Hope dies last</h4></span>
-                        <div class="popular__meta"><strong>Text</strong> Anne Henry</div>
+                        <h4 class="popular__title">Hope dies last</h4>
+                        <div class="popular__meta">
+                          <strong>Text</strong> Anne Henry
+                        </div>
                       </div>
                     </a>
                   </article>
@@ -327,8 +494,12 @@
                     <a class="popular__link" href="#">
                       <div class="popular__num" aria-hidden="true">03</div>
                       <div class="popular__body">
-                        <span class="popular__title"><h4>Artists who want to rise above</h4></span>
-                        <div class="popular__meta"><strong>Text</strong> Anna Nielsen</div>
+                        <h4 class="popular__title">
+                          Artists who want to rise above
+                        </h4>
+                        <div class="popular__meta">
+                          <strong>Text</strong> Anna Nielsen
+                        </div>
                       </div>
                     </a>
                   </article>
@@ -352,18 +523,22 @@
                     placeholder="Email"
                     required
                   />
-                  <button type="submit" class="newsletter__button">SIGN UP</button>
+                  <button type="submit" class="newsletter__button">
+                    SIGN UP
+                  </button>
                 </form>
               </div>
             </aside>
           </div>
         </section>
 
-        <section class="podcast" aria-label="Podcast episodes">
+        <section class="podcast" id="podcast" aria-label="Podcast episodes">
           <div class="podcast-inner">
             <div class="section-head">
               <h2 class="podcast-heading">PODCAST</h2>
-              <a href="#" class="all-articles-link section-top-link">ALL EPISODES</a>
+              <a href="authors.html" class="all-articles-link section-top-link"
+                >ALL EPISODES</a
+              >
             </div>
 
             <div class="podcast-grid">
@@ -374,7 +549,11 @@
                   aria-label="Open episode 5: The Problem of today's cultural development"
                 >
                   <div class="cover">
-                    <img src="assets/podcast-cover-1.png" alt="" loading="lazy" />
+                    <img
+                      src="assets/podcast-cover-1.png"
+                      alt=""
+                      loading="lazy"
+                    />
                   </div>
 
                   <h3 class="podcast-title">
@@ -396,9 +575,17 @@
               </article>
 
               <article class="podcast-card">
-                <a class="podcast-link" href="#" aria-label="Open episode 4: The hidden messages of Jack Nielson">
+                <a
+                  class="podcast-link"
+                  href="#"
+                  aria-label="Open episode 4: The hidden messages of Jack Nielson"
+                >
                   <div class="cover">
-                    <img src="assets/podcast-cover-2.png" alt="" loading="lazy" />
+                    <img
+                      src="assets/podcast-cover-2.png"
+                      alt=""
+                      loading="lazy"
+                    />
                   </div>
 
                   <h3 class="podcast-title">
@@ -426,7 +613,11 @@
                   aria-label="Open episode 3: Behind the scenes of the street art culture"
                 >
                   <div class="cover">
-                    <img src="assets/podcast-cover-3.png" alt="" loading="lazy" />
+                    <img
+                      src="assets/podcast-cover-3.png"
+                      alt=""
+                      loading="lazy"
+                    />
                   </div>
 
                   <h3 class="podcast-title">
@@ -450,74 +641,128 @@
           </div>
         </section>
 
-        <section class="authors" aria-label="Authors">
+        <section class="authors" id="authors" aria-label="Authors">
           <div class="authors-inner">
             <div class="section-head">
               <h2 class="authors-title">AUTHORS</h2>
-              <a href="#" class="all-articles-link section-top-link">ALL AUTHORS</a>
+              <a href="#" class="all-articles-link section-top-link"
+                >ALL AUTHORS</a
+              >
             </div>
 
             <div class="authors-grid">
               <article class="author-row">
                 <div class="author-cell author-left">
-                  <img class="author-avatar" src="assets/Jacob Gronberg.png" alt="Portrait of Jakob Grønberg" loading="lazy" />
+                  <img
+                    class="author-avatar"
+                    src="assets/Jacob Gronberg.png"
+                    alt="Portrait of Jakob Gronberg"
+                    loading="lazy"
+                  />
                   <div class="author-info">
-                    <h3 class="author-name">Jakob Grønberg</h3>
-                    <p class="author-meta">
-                      <span class="meta-label">Job</span> Artist
-                      <span class="meta-label">City</span> Berlin
-                    </p>
+                    <h3 class="author-name">Jakob Gr&oslash;nberg</h3>
+                    <dl class="author-meta">
+                      <div class="meta-item">
+                        <dt class="meta-label">Job</dt>
+                        <dd>Artist</dd>
+                      </div>
+                      <div class="meta-item">
+                        <dt class="meta-label">City</dt>
+                        <dd>Berlin</dd>
+                      </div>
+                    </dl>
                   </div>
                 </div>
-                
+
                 <div class="author-cell author-right">
-                  <img class="author-avatar" src="assets/Louise Jensen.png" alt="Portrait of Louise Jensen" loading="lazy" />
+                  <img
+                    class="author-avatar"
+                    src="assets/Louise Jensen.png"
+                    alt="Portrait of Louise Jensen"
+                    loading="lazy"
+                  />
                   <div class="author-info">
                     <h3 class="author-name">Louise Jensen</h3>
-                    <p class="author-meta">
-                      <span class="meta-label">Job</span> Photograph
-                      <span class="meta-label">City</span> Copenhagen
-                    </p>
+                    <dl class="author-meta">
+                      <div class="meta-item">
+                        <dt class="meta-label">Job</dt>
+                        <dd>Artist</dd>
+                      </div>
+                      <div class="meta-item">
+                        <dt class="meta-label">City</dt>
+                        <dd>Stockholm</dd>
+                      </div>
+                    </dl>
                   </div>
                 </div>
               </article>
 
               <article class="author-row">
                 <div class="author-cell author-left">
-                  <img class="author-avatar" src="assets/Anne Henry.png" alt="Portrait of Anne Henry" loading="lazy" />
+                  <img
+                    class="author-avatar"
+                    src="assets/Anne Henry.png"
+                    alt="Portrait of Anne Henry"
+                    loading="lazy"
+                  />
                   <div class="author-info">
                     <h3 class="author-name">Anne Henry</h3>
-                    <p class="author-meta">
-                      <span class="meta-label">Job</span> Photograph
-                      <span class="meta-label">City</span> New York
-                    </p>
+                    <dl class="author-meta">
+                      <div class="meta-item">
+                        <dt class="meta-label">Job</dt>
+                        <dd>Photograph</dd>
+                      </div>
+                      <div class="meta-item">
+                        <dt class="meta-label">City</dt>
+                        <dd>New York</dd>
+                      </div>
+                    </dl>
                   </div>
                 </div>
 
                 <div class="author-cell author-right">
-                  <img class="author-avatar" src="assets/Anna Nielsen.png" alt="Portrait of Anna Nielsen" loading="lazy" />
+                  <img
+                    class="author-avatar"
+                    src="assets/Anna Nielsen.png"
+                    alt="Portrait of Anna Nielsen"
+                    loading="lazy"
+                  />
                   <div class="author-info">
                     <h3 class="author-name">Anna Nielsen</h3>
-                    <p class="author-meta">
-                      <span class="meta-label">Job</span> Artist
-                      <span class="meta-label">City</span> Copenhagen
-                    </p>
+                    <dl class="author-meta">
+                      <div class="meta-item">
+                        <dt class="meta-label">Job</dt>
+                        <dd>Columnists</dd>
+                      </div>
+                      <div class="meta-item">
+                        <dt class="meta-label">City</dt>
+                        <dd>Copenhagen</dd>
+                      </div>
+                    </dl>
                   </div>
                 </div>
-
-
-                
               </article>
 
               <article class="author-row">
                 <div class="author-cell author-left">
-                  <img class="author-avatar" src="assets/Jane Cooper.png" alt="Portrait of Jane Cooper" loading="lazy" />
+                  <img
+                    class="author-avatar"
+                    src="assets/Jane Cooper.png"
+                    alt="Portrait of Jane Cooper"
+                    loading="lazy"
+                  />
                   <div class="author-info">
                     <h3 class="author-name">Jane Cooper</h3>
-                    <p class="author-meta">
-                      <span class="meta-label">Job</span> Artist
-                      <span class="meta-label">City</span> Berlin
-                    </p>
+                    <dl class="author-meta">
+                      <div class="meta-item">
+                        <dt class="meta-label">Job</dt>
+                        <dd>Artist</dd>
+                      </div>
+                      <div class="meta-item">
+                        <dt class="meta-label">City</dt>
+                        <dd>Berlin</dd>
+                      </div>
+                    </dl>
                   </div>
                 </div>
 
@@ -530,10 +775,16 @@
                   />
                   <div class="author-info">
                     <h3 class="author-name">Cristofer Vaccaro</h3>
-                    <p class="author-meta">
-                      <span class="meta-label">Job</span> Artist
-                      <span class="meta-label">City</span> Rome
-                    </p>
+                    <dl class="author-meta">
+                      <div class="meta-item">
+                        <dt class="meta-label">Job</dt>
+                        <dd>Artist</dd>
+                      </div>
+                      <div class="meta-item">
+                        <dt class="meta-label">City</dt>
+                        <dd>Lisbon</dd>
+                      </div>
+                    </dl>
                   </div>
                 </div>
               </article>
@@ -561,7 +812,13 @@
 
           <form class="footer-form" action="#" method="post">
             <label class="sr-only" for="footerEmail">Email</label>
-            <input id="footerEmail" type="email" name="email" placeholder="Email" required />
+            <input
+              id="footerEmail"
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
             <button type="submit">SIGN UP</button>
           </form>
         </div>
@@ -572,19 +829,28 @@
           </div>
 
           <div class="footer-links-grid">
-            <nav class="footer-col footer-nav" aria-label="Footer links column 1">
+            <nav
+              class="footer-col footer-nav"
+              aria-label="Footer links column 1"
+            >
               <a href="#">Art</a>
               <a href="#">Design</a>
               <a href="#">Architecture</a>
             </nav>
 
-            <nav class="footer-col footer-nav" aria-label="Footer links column 2">
+            <nav
+              class="footer-col footer-nav"
+              aria-label="Footer links column 2"
+            >
               <a href="magazine.html">Magazine</a>
-              <a href="#">Podcast</a>
-              <a href="#">Authors</a>
+              <a href="podcast.html">Podcast</a>
+              <a href="authors.html">Authors</a>
             </nav>
 
-            <nav class="footer-col footer-nav" aria-label="Footer links column 3">
+            <nav
+              class="footer-col footer-nav"
+              aria-label="Footer links column 3"
+            >
               <a href="#">Styleguide</a>
               <a href="#">Licensing</a>
               <a href="#">Changelog</a>
@@ -593,32 +859,66 @@
         </div>
 
         <div class="footer-bottom">
-          <p>© Made by Pawel Gola - Powered by Webflow</p>
+          <p>&copy; Made by Pawel Gola - Powered by Webflow</p>
 
           <div class="footer-socials" aria-label="Social links">
             <a href="#" aria-label="Instagram" class="social">
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
-                <rect x="3.5" y="3.5" width="17" height="17" rx="5.5" stroke="currentColor" stroke-width="2"></rect>
-                <circle cx="12" cy="12" r="4.25" stroke="currentColor" stroke-width="2"></circle>
+                <rect
+                  x="3.5"
+                  y="3.5"
+                  width="17"
+                  height="17"
+                  rx="5.5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                ></rect>
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="4.25"
+                  stroke="currentColor"
+                  stroke-width="2"
+                ></circle>
                 <circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"></circle>
               </svg>
             </a>
             <a href="#" aria-label="Twitter" class="social">
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
-                <path d="M4 4L10.95 13.3L4.35 20H6.75L12.02 14.65L16 20H20L12.67 10.15L18.8 4H16.4L11.6 8.8L8 4H4Z" fill="currentColor"></path>
+                <path
+                  d="M4 4L10.95 13.3L4.35 20H6.75L12.02 14.65L16 20H20L12.67 10.15L18.8 4H16.4L11.6 8.8L8 4H4Z"
+                  fill="currentColor"
+                ></path>
               </svg>
             </a>
             <a href="#" aria-label="YouTube" class="social">
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
-                <rect x="3" y="6.5" width="18" height="11" rx="3" fill="currentColor"></rect>
+                <rect
+                  x="3"
+                  y="6.5"
+                  width="18"
+                  height="11"
+                  rx="3"
+                  fill="currentColor"
+                ></rect>
                 <path d="M10 9.5V14.5L14.5 12L10 9.5Z" fill="#111111"></path>
               </svg>
             </a>
             <a href="#" aria-label="RSS" class="social">
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none">
                 <circle cx="6.2" cy="17.8" r="1.8" fill="currentColor"></circle>
-                <path d="M4.5 11.5C8.65 11.5 12 14.85 12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-                <path d="M4.5 6C11.95 6 18 12.05 18 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                <path
+                  d="M4.5 11.5C8.65 11.5 12 14.85 12 19"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                ></path>
+                <path
+                  d="M4.5 6C11.95 6 18 12.05 18 19"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                ></path>
               </svg>
             </a>
           </div>
