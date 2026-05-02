@@ -347,16 +347,6 @@ button.fyre-chip {
   width: 24px;
 }
 
-@keyframes fyre-ticker {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
-}
-
 .fyre-social {
   color: rgba(255, 255, 255, 0.8);
   height: 28px;
