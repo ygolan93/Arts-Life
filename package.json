@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "build": "npm run build:css",
     "build:css": "sass styles/main.scss style.css --style=expanded --no-source-map",
     "watch:css": "sass styles/main.scss style.css --watch --style=expanded --no-source-map"
   },
