@@ -1,0 +1,25 @@
+/* =========================
+   Typography
+   Fluid display + heading + body scale.
+========================= */
+
+:root {
+  --fs-display-xl: clamp(48px, 8vw, 104px);
+  --fs-display-lg: clamp(40px, 6vw, 80px);
+  --fs-display-md: clamp(28px, 4vw, 48px);
+  --fs-h1: clamp(40px, 6vw, 72px);
+  --fs-h2: clamp(24px, 3vw, 32px);
+  --fs-h3: clamp(20px, 2.4vw, 24px);
+  --fs-h4: clamp(18px, 2vw, 22px);
+  --fs-lead: clamp(16px, 1.6vw, 22px);
+  --fs-body: 16px;
+  --fs-body-sm: 15px;
+  --fs-meta: 14px;
+  --fs-eyebrow: 12px;
+}
+
+body {
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}

@@ -1,0 +1,37 @@
+/* =========================
+   Breakpoints
+   Single source of truth for responsive media queries.
+   Use bp-up($name) for min-width and bp-down($name) for max-width.
+========================= */
+@use "sass:map";
+
+$bp: (
+  sm:    375px,
+  md:    480px,
+  lg:    768px,
+  xl:   1024px,
+  xxl:  1200px,
+  xxxl: 1440px
+);
+
+@function bp($name) {
+  @return map.get($bp, $name);
+}
+
+@mixin bp-up($name) {
+  @media (min-width: #{map.get($bp, $name)}) {
+    @content;
+  }
+}
+
+@mixin bp-down($name) {
+  @media (max-width: #{map.get($bp, $name) - 1px}) {
+    @content;
+  }
+}
+
+@mixin bp-between($a, $b) {
+  @media (min-width: #{map.get($bp, $a)}) and (max-width: #{map.get($bp, $b) - 1px}) {
+    @content;
+  }
+}

@@ -1,6 +1,74 @@
 /* =========================
    Shared Footer Systems
 ========================= */
+@use "breakpoints" as bp;
+
+/* Unified mobile baseline applied across every footer theme. */
+@include bp.bp-down(lg) {
+  .footer,
+  .fyre-footer {
+    margin-top: 72px;
+  }
+
+  .footer-inner,
+  .fyre-footer-inner {
+    width: min(100%, calc(100% - 48px));
+  }
+
+  .footer-form,
+  .fyre-footer-form {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .footer-form input,
+  .footer-form button,
+  .fyre-footer-form input,
+  .fyre-footer-form button,
+  .fyre-footer-input,
+  .fyre-footer-submit {
+    min-height: var(--tap-target, 44px);
+    width: 100%;
+  }
+
+  .footer-links,
+  .fyre-footer-links {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .footer-links-grid,
+  .fyre-footer-links-grid {
+    grid-template-columns: 1fr;
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .footer-bottom,
+  .fyre-footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .footer-socials a,
+  .fyre-footer-socials a {
+    align-items: center;
+    display: inline-flex;
+    height: var(--tap-target, 44px);
+    justify-content: center;
+    min-width: var(--tap-target, 44px);
+  }
+}
+
+@include bp.bp-down(sm) {
+  .footer-inner,
+  .fyre-footer-inner {
+    width: min(100%, calc(100% - 32px));
+  }
+}
 
 /* =========================
    _components.scss footer rules

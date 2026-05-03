@@ -201,11 +201,11 @@ body.magazine-post {
   color: var(--fyre-black);
   display: inline-flex;
   font-size: 0;
-  height: 20px;
+  height: var(--tap-target, 44px);
   justify-content: center;
   position: relative;
   text-decoration: none;
-  width: 20px;
+  width: var(--tap-target, 44px);
 }
 
 .post-author__meta a::before {
@@ -213,8 +213,8 @@ body.magazine-post {
   border-radius: 50%;
   content: "";
   display: block;
-  height: 10px;
-  width: 10px;
+  height: 12px;
+  width: 12px;
 }
 
 .post-content__body {
@@ -266,9 +266,9 @@ body.magazine-post {
 }
 
 .post-content__quote p::before {
-  content: "â€œ";
+  content: "\201C";
   font-family: "Rubik", Arial, Helvetica, sans-serif;
-  font-size: 96px;
+  font-size: clamp(48px, 9vw, 96px);
   font-weight: 600;
   line-height: 1;
 }
@@ -423,10 +423,6 @@ body.magazine-post {
 }
 
 @media (min-width: 1200px) {
-  .magazine-post {
-      min-height: 6025px;
-    }
-
   .magazine-post .fyre-shell {
       max-width: 1520px;
       width: 1520px;

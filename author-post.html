@@ -22,12 +22,25 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="authors-page author-post-page">
+    <a class="skip-link" href="#main">Skip to main content</a>
     <header class="site-header">
       <div class="authors-shell">
         <div class="header-inner">
           <div class="header-row">
             <a class="logo site-logo" href="index.html">FYRRE MAGAZINE</a>
-            <div class="header-actions">
+            <button
+              class="nav-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="primary-nav"
+              aria-label="Toggle navigation"
+            >
+              <span class="nav-toggle__icon" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </span>
+              <span class="nav-toggle__label">Menu</span>
+            </button>
+            <div class="header-actions" id="primary-nav" data-collapsed="true">
               <nav class="header-nav" aria-label="Main navigation">
                 <a href="magazine.html">Magazine</a>
                 <a href="authors.html" aria-current="page">Authors</a>
@@ -68,7 +81,7 @@
       </div>
     </header>
 
-    <main class="author-post-main">
+    <main class="author-post-main" id="main">
       <article class="author-post" aria-labelledby="author-post-title">
         <div class="authors-shell">
           <div class="author-post-topline">
@@ -319,6 +332,7 @@
       </div>
     </footer>
 
+    <script src="nav.js"></script>
     <script src="ticker.js"></script>
   </body>
 </html>

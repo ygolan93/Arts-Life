@@ -1,0 +1,191 @@
+/* =========================
+   Shared card / button / link patterns
+   Provides a mobile baseline applied across all card variants.
+========================= */
+@use "breakpoints" as bp;
+
+@mixin card-stack-mobile {
+  align-items: stretch;
+  flex-direction: column;
+  gap: 24px;
+  height: auto;
+  min-height: 0;
+  width: 100%;
+}
+
+@mixin card-image-mobile($ratio: "1 / 1") {
+  aspect-ratio: #{$ratio};
+  display: block;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+@mixin card-tap-target {
+  display: block;
+  min-height: var(--tap-target, 44px);
+  text-decoration: none;
+}
+
+@include bp.bp-down(lg) {
+  /* Frontpage cards */
+  .article > .article-link {
+    @include card-stack-mobile;
+  }
+
+  .article > .article-link > .column,
+  .article > .article-link .thumbnail-article-image {
+    flex-basis: auto;
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .article-link .thumbnail-article-image {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* Magazine listing cards */
+  .fyre-article-card .fyre-article-link {
+    @include card-stack-mobile;
+  }
+
+  .fyre-article-card .fyre-article-image {
+    @include card-image-mobile("1 / 1");
+  }
+
+  /* Magazine post related cards */
+  .related-posts__card a {
+    @include card-stack-mobile;
+  }
+
+  .related-posts__card img {
+    @include card-image-mobile("1 / 1");
+  }
+
+  /* Author post article cards */
+  .author-article-card a {
+    @include card-stack-mobile;
+  }
+
+  .author-article-card img {
+    @include card-image-mobile("1 / 1");
+  }
+
+  /* Podcast post latest cards */
+  .podpost-card a {
+    @include card-stack-mobile;
+  }
+
+  .podpost-card img {
+    @include card-image-mobile("1 / 1");
+  }
+
+  /* Podcast page row */
+  .podcast-row {
+    flex-direction: column;
+    gap: 24px;
+    height: auto;
+  }
+
+  .podcast-card {
+    flex-basis: auto;
+    width: 100%;
+  }
+}
+
+/* =========================
+   Generic button utility
+========================= */
+.btn {
+  align-items: center;
+  background: var(--color-black, #000);
+  border: 1px solid var(--color-black, #000);
+  color: var(--color-white, #fff);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: var(--font-heading, inherit);
+  font-size: 14px;
+  font-weight: 500;
+  gap: 8px;
+  justify-content: center;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  min-height: var(--tap-target, 44px);
+  padding: 12px 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    background-color 140ms ease,
+    color 140ms ease,
+    transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 140ms ease;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.07);
+  outline: none;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  opacity: 0.92;
+  transform: translateY(-1px) scale(0.99);
+}
+
+.btn--inverse {
+  background: var(--color-white, #fff);
+  border-color: var(--color-white, #fff);
+  color: var(--color-black, #000);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: currentColor;
+}
+
+/* =========================
+   Arrow link utility
+========================= */
+.link-arrow {
+  align-items: center;
+  color: inherit;
+  display: inline-flex;
+  font-family: var(--font-heading, inherit);
+  font-size: 14px;
+  font-weight: 600;
+  gap: 6px;
+  letter-spacing: 0.04em;
+  min-height: var(--tap-target, 44px);
+  padding: 6px 4px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 140ms ease;
+}
+
+.link-arrow::after {
+  content: "\2192";
+  display: inline-flex;
+  font-size: 18px;
+  line-height: 1;
+  transition: transform 180ms ease;
+}
+
+.link-arrow:hover,
+.link-arrow:focus-visible {
+  outline: none;
+  transform: translateX(2px);
+}
+
+.link-arrow:hover::after,
+.link-arrow:focus-visible::after {
+  transform: translateX(3px);
+}

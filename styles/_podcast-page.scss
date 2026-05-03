@@ -130,8 +130,8 @@ body.podcast-page .podcast-hero {
 }
 
 body.podcast-page .podcast-hero h1 {
+  aspect-ratio: 1520 / 235;
   display: block;
-  height: 235.62px;
   line-height: 0;
   margin: 0;
   overflow: hidden;
@@ -142,7 +142,8 @@ body.podcast-page .podcast-hero h1 {
 body.podcast-page .podcast-hero__title-image {
   display: block;
   height: 100%;
-  object-fit: fill;
+  object-fit: contain;
+  object-position: center;
   width: 100%;
 }
 
@@ -571,14 +572,11 @@ body.podcast-page .footer-brand {
 body.podcast-page .footer-brand h3 {
   color: var(--podcast-white);
   font-family: var(--podcast-heading);
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 600;
-  height: 17.95px;
-  letter-spacing: 0;
-  line-height: 17.95px;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
   margin: 0;
-  transform: scaleY(0.748);
-  transform-origin: left top;
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -804,7 +802,7 @@ body.podcast-page .footer-socials .social:active {
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1023px) {
   body.podcast-page {
       --podcast-gutter: 40px;
     }
@@ -816,14 +814,22 @@ body.podcast-page .footer-socials .social:active {
   body.podcast-page .podcast-row {
       align-items: flex-start;
       flex-direction: column;
+      gap: 24px;
       height: auto;
-      min-height: 240px;
+      min-height: 0;
+    }
+
+  body.podcast-page .podcast-row__summary {
+      width: 100%;
     }
 
   body.podcast-page .podcast-row__meta {
       flex-basis: auto;
-      margin-left: 336px;
-      width: calc(100% - 336px);
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: flex-start;
+      margin-left: 0;
+      width: 100%;
     }
 }
 
@@ -845,16 +851,9 @@ body.podcast-page .footer-socials .social:active {
       height: auto;
     }
 
-  body.podcast-page .podcast-header__row,
-  body.podcast-page .podcast-header__actions,
-  body.podcast-page .podcast-nav {
+  body.podcast-page .podcast-header__row {
       align-items: flex-start;
-      flex-direction: column;
-    }
-
-  body.podcast-page .podcast-header__separator,
-  body.podcast-page .podcast-socials {
-      display: none;
+      flex-wrap: wrap;
     }
 
   body.podcast-page .podcast-hero {

@@ -101,16 +101,25 @@ body.author-post-page .author-socials .social {
   align-items: center;
   color: var(--authors-black);
   display: inline-flex;
-  height: 20px;
+  height: var(--tap-target, 44px);
   justify-content: center;
+  min-width: var(--tap-target, 44px);
+  padding: 12px;
   text-decoration: none;
-  width: 20px;
 }
 
 body.author-post-page .author-socials svg {
   display: block;
   height: 20px;
   width: 20px;
+}
+
+@media (min-width: 1024px) {
+  body.author-post-page .author-socials .social {
+    height: 20px;
+    min-width: 20px;
+    padding: 0;
+  }
 }
 
 body.author-post-page .author-profile-content {
@@ -128,11 +137,12 @@ body.author-post-page .author-profile-intro {
 body.author-post-page .author-profile-intro h1 {
   color: var(--authors-black);
   font-family: var(--authors-heading);
-  font-size: 104px;
+  font-size: clamp(56px, 8vw, 104px);
   font-weight: 600;
   letter-spacing: 0;
-  line-height: 1.1;
+  line-height: 1.05;
   margin: 0;
+  overflow-wrap: anywhere;
   padding: 0;
   text-align: left;
   text-transform: uppercase;
@@ -251,7 +261,6 @@ body.author-post-page .author-article-card dd {
   font-size: 14px;
   line-height: 1.6;
   margin: 0;
-  white-space: nowrap;
 }
 
 body.author-post-page .author-article-card dt {
@@ -296,7 +305,9 @@ body.author-post-page .author-article-card dd {
   body.author-post-page .author-profile-sidebar {
     max-width: 350px;
   }
+}
 
+@media (max-width: 600px) {
   body.author-post-page .author-articles-grid {
     grid-template-columns: 1fr;
   }

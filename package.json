@@ -1,8 +1,16 @@
 {
   "scripts": {
     "build": "npm run build:css",
+    "prebuild:css": "npm run fix:enc",
     "build:css": "sass styles/main.scss style.css --style=expanded --no-source-map",
-    "watch:css": "sass styles/main.scss style.css --watch --style=expanded --no-source-map"
+    "watch:css": "sass styles/main.scss style.css --watch --style=expanded --no-source-map",
+    "fix:enc": "node -e \"const fs=require('fs');const path=require('path');function fix(f){const buf=fs.readFileSync(f);if(buf.length>=2&&buf[0]===0xff&&buf[1]===0xfe){fs.writeFileSync(f,buf.slice(2).toString('utf16le'),'utf8');console.log('LE-BOM->utf8',f);return;}if(buf.length>=3&&buf[0]===0xef&&buf[1]===0xbb&&buf[2]===0xbf){fs.writeFileSync(f,buf.slice(3).toString('utf8'),'utf8');console.log('BOM->utf8',f);return;}let z=0,n=Math.min(buf.length,256);for(let i=0;i<n;i++)if(buf[i]===0)z++;if(z>n*0.2){fs.writeFileSync(f,buf.toString('utf16le'),'utf8');console.log('LE->utf8',f);return;}}for(const e of fs.readdirSync('styles',{withFileTypes:true})){if(e.isFile()&&e.name.endsWith('.scss'))fix(path.join('styles',e.name));}for(const f of fs.readdirSync('.')){if(f.endsWith('.html')||f.endsWith('.js'))fix(f);}\"",
+    "qa": "node qa.js",
+    "serve": "node serve.js",
+    "git:status": "git status && git log --oneline -10 && git remote -v && git branch --show-current",
+    "git:diffstat": "git diff --stat HEAD",
+    "git:commit": "node commit.js",
+    "git:push": "git push origin HEAD"
   },
   "devDependencies": {
     "sass": "^1.69.0"

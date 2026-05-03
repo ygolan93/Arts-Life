@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="podcast-post">
+    <a class="skip-link" href="#main">Skip to main content</a>
     <header class="podpost-header">
       <div class="podpost-shell">
         <div class="podpost-header__row">
@@ -33,7 +34,20 @@
             FYRRE MAGAZINE
           </a>
 
-          <div class="podpost-header__actions">
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="primary-nav"
+            aria-label="Toggle navigation"
+          >
+            <span class="nav-toggle__icon" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </span>
+            <span class="nav-toggle__label">Menu</span>
+          </button>
+
+          <div class="podpost-header__actions" id="primary-nav" data-collapsed="true">
             <nav class="podpost-nav" aria-label="Primary navigation">
               <a href="magazine.html">Magazine</a>
               <a href="authors.html">Authors</a>
@@ -117,7 +131,7 @@
       </div>
     </header>
 
-    <main class="podpost-main">
+    <main class="podpost-main" id="main">
       <div class="podpost-shell">
         <div class="podpost-topline">
           <a class="podpost-back" href="podcast.html">Go back</a>
@@ -506,6 +520,7 @@
       </div>
     </footer>
 
+    <script src="nav.js"></script>
     <script src="ticker.js"></script>
   </body>
 </html>

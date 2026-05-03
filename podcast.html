@@ -22,13 +22,27 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="podcast-page">
+    <a class="skip-link" href="#main">Skip to main content</a>
     <header class="podcast-header">
       <div class="podcast-shell">
         <div class="podcast-header__inner">
           <div class="podcast-header__row">
             <a class="podcast-logo" href="index.html">FYRRE MAGAZINE</a>
 
-            <div class="podcast-header__actions">
+            <button
+              class="nav-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="primary-nav"
+              aria-label="Toggle navigation"
+            >
+              <span class="nav-toggle__icon" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </span>
+              <span class="nav-toggle__label">Menu</span>
+            </button>
+
+            <div class="podcast-header__actions" id="primary-nav" data-collapsed="true">
               <nav class="podcast-nav" aria-label="Main navigation">
                 <a href="magazine.html">Magazine</a>
                 <a href="authors.html">Authors</a>
@@ -118,7 +132,7 @@
       </div>
     </header>
 
-    <main class="podcast-main">
+    <main class="podcast-main" id="main">
       <section class="podcast-hero" aria-labelledby="podcast-page-title">
         <div class="podcast-shell">
           <h1 id="podcast-page-title">
@@ -403,6 +417,7 @@
       </div>
     </footer>
 
+    <script src="nav.js"></script>
     <script src="ticker.js"></script>
   </body>
 </html>

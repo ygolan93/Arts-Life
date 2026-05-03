@@ -22,12 +22,25 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="authors-page">
+    <a class="skip-link" href="#main">Skip to main content</a>
     <header class="site-header">
       <div class="authors-shell">
         <div class="header-inner">
           <div class="header-row">
             <a class="logo site-logo" href="index.html">FYRRE MAGAZINE</a>
-            <div class="header-actions">
+            <button
+              class="nav-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="primary-nav"
+              aria-label="Toggle navigation"
+            >
+              <span class="nav-toggle__icon" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </span>
+              <span class="nav-toggle__label">Menu</span>
+            </button>
+            <div class="header-actions" id="primary-nav" data-collapsed="true">
               <nav class="header-nav" aria-label="Main navigation">
                 <a href="magazine.html">Magazine</a>
                 <a href="authors.html" aria-current="page">Authors</a>
@@ -115,7 +128,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main">
       <section class="authors-page" aria-labelledby="authors-page-title">
         <div class="authors-shell">
           <h1 id="authors-page-title">
@@ -143,7 +156,7 @@
                     <dd>Berlin</dd>
                   </div>
                 </dl>
-                <a class="authors-page-about" href="#"
+                <a class="authors-page-about" aria-label="About Jakob Gr&oslash;nberg" href="#"
                   ><span>About</span
                   ><svg viewBox="0 0 24 24" aria-hidden="true">
                     <path
@@ -173,7 +186,7 @@
                     <dd>Berlin</dd>
                   </div>
                 </dl>
-                <a class="authors-page-about" href="author-post.html"
+                <a class="authors-page-about" aria-label="About Louise Jensen" href="author-post.html"
                   ><span>About</span
                   ><svg viewBox="0 0 24 24" aria-hidden="true">
                     <path
@@ -203,7 +216,7 @@
                     <dd>Berlin</dd>
                   </div>
                 </dl>
-                <a class="authors-page-about" href="#"
+                <a class="authors-page-about" aria-label="About Anne Henry" href="#"
                   ><span>About</span
                   ><svg viewBox="0 0 24 24" aria-hidden="true">
                     <path
@@ -233,7 +246,7 @@
                     <dd>Berlin</dd>
                   </div>
                 </dl>
-                <a class="authors-page-about" href="#"
+                <a class="authors-page-about" aria-label="About Anna Nielsen" href="#"
                   ><span>About</span
                   ><svg viewBox="0 0 24 24" aria-hidden="true">
                     <path
@@ -263,7 +276,7 @@
                     <dd>Berlin</dd>
                   </div>
                 </dl>
-                <a class="authors-page-about" href="#"
+                <a class="authors-page-about" aria-label="About Jane Cooper" href="#"
                   ><span>About</span
                   ><svg viewBox="0 0 24 24" aria-hidden="true">
                     <path
@@ -293,7 +306,7 @@
                     <dd>Berlin</dd>
                   </div>
                 </dl>
-                <a class="authors-page-about" href="#"
+                <a class="authors-page-about" aria-label="About Cristofer Vaccaro" href="#"
                   ><span>About</span
                   ><svg viewBox="0 0 24 24" aria-hidden="true">
                     <path
@@ -438,6 +451,7 @@
       </div>
     </footer>
 
+    <script src="nav.js"></script>
     <script src="ticker.js"></script>
   </body>
 </html>

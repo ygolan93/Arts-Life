@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="fyre-page">
+    <a class="skip-link" href="#main">Skip to main content</a>
     <header class="fyre-header">
       <div class="fyre-shell">
         <div class="fyre-header-inner">
@@ -28,7 +29,20 @@
               >FYRRE MAGAZINE</a
             >
 
-            <div class="fyre-header-actions">
+            <button
+              class="nav-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="primary-nav"
+              aria-label="Toggle navigation"
+            >
+              <span class="nav-toggle__icon" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </span>
+              <span class="nav-toggle__label">Menu</span>
+            </button>
+
+            <div class="fyre-header-actions" id="primary-nav" data-collapsed="true">
               <nav class="fyre-nav" aria-label="Primary navigation">
                 <a href="magazine.html" aria-current="page">Magazine</a>
                 <a href="authors.html">Authors</a>
@@ -115,7 +129,7 @@
       </div>
     </header>
 
-    <main class="fyre-main">
+    <main class="fyre-main" id="main">
       <section class="fyre-hero" aria-labelledby="fyre-page-title">
         <div class="fyre-shell">
           <h1 class="fyre-title" id="fyre-page-title">
@@ -907,5 +921,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="nav.js"></script>
+    <script src="ticker.js"></script>
   </body>
 </html>

@@ -1,0 +1,139 @@
+/* =========================
+   Header (shared baseline)
+   - Desktop: horizontal logo + nav + socials
+   - Mobile (<lg): nav-toggle button reveals a vertical panel
+========================= */
+@use "breakpoints" as bp;
+
+.site-header,
+.fyre-header,
+.podcast-header,
+.podpost-header {
+  width: 100%;
+}
+
+.nav-toggle {
+  align-items: center;
+  background: transparent;
+  border: 1px solid currentColor;
+  color: inherit;
+  cursor: pointer;
+  display: none;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  gap: 10px;
+  height: var(--tap-target-lg, 48px);
+  justify-content: center;
+  letter-spacing: 0.06em;
+  min-width: var(--tap-target-lg, 48px);
+  padding: 0 16px;
+  text-transform: uppercase;
+}
+
+.nav-toggle__icon {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 18px;
+  justify-content: center;
+  width: 18px;
+}
+
+.nav-toggle__icon span {
+  background: currentColor;
+  display: block;
+  height: 2px;
+  transition: transform 200ms ease, opacity 140ms ease;
+  width: 18px;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle__icon span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle__icon span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle__icon span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+@include bp.bp-down(lg) {
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  [data-collapsed="true"] {
+    display: none !important;
+  }
+
+  [data-collapsed="false"] {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 20px;
+    width: 100%;
+  }
+
+  [data-collapsed="false"] .header-nav,
+  [data-collapsed="false"] .fyre-nav,
+  [data-collapsed="false"] .podcast-nav,
+  [data-collapsed="false"] .podpost-nav {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  [data-collapsed="false"] .header-separator,
+  [data-collapsed="false"] .fyre-header-separator,
+  [data-collapsed="false"] .podcast-header__separator,
+  [data-collapsed="false"] .podpost-header__separator {
+    display: none;
+  }
+
+  [data-collapsed="false"] .header-socials,
+  [data-collapsed="false"] .fyre-header-socials,
+  [data-collapsed="false"] .podcast-socials,
+  [data-collapsed="false"] .podpost-socials {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+}
+
+.site-header .social,
+.fyre-header .fyre-header-icon,
+.podcast-header .podcast-social,
+.podpost-socials > a {
+  align-items: center;
+  display: inline-flex;
+  height: var(--tap-target, 44px);
+  justify-content: center;
+  min-width: var(--tap-target, 44px);
+  padding: 12px;
+}
+
+.site-header .social svg,
+.fyre-header .fyre-header-icon svg,
+.podcast-header .podcast-social svg,
+.podpost-socials > a svg {
+  height: 20px;
+  width: 20px;
+}
+
+@include bp.bp-up(lg) {
+  .site-header .social,
+  .fyre-header .fyre-header-icon,
+  .podcast-header .podcast-social,
+  .podpost-socials > a {
+    height: 20px;
+    min-width: 20px;
+    padding: 0;
+  }
+}

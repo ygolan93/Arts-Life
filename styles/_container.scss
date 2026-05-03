@@ -1,0 +1,29 @@
+/* =========================
+   Page shell mixin
+   Single responsive container that replaces per-page calc shells.
+========================= */
+@use "breakpoints" as bp;
+
+@mixin page-shell(
+  $content: 1520px,
+  $gutter-desktop: 80px,
+  $gutter-md: 48px,
+  $gutter-sm: 24px,
+  $gutter-xs: 16px
+) {
+  margin-inline: auto;
+  max-width: $content;
+  width: min(#{$content}, calc(100% - #{$gutter-desktop} * 2));
+
+  @include bp.bp-down(xxl) {
+    width: min(#{$content}, calc(100% - #{$gutter-md} * 2));
+  }
+
+  @include bp.bp-down(lg) {
+    width: min(#{$content}, calc(100% - #{$gutter-sm} * 2));
+  }
+
+  @include bp.bp-down(sm) {
+    width: min(#{$content}, calc(100% - #{$gutter-xs} * 2));
+  }
+}
